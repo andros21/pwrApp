@@ -1,2 +1,2 @@
 ### ePwr Stats
-###### [Dash App](https://plot.ly/) to interact with power consumptions stats
+###### [Dash app](https://plotly.com/) to interact with power consumptions stats
