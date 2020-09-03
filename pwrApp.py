@@ -248,8 +248,9 @@ def update_plot_hover(ser, month, hoverdict):
     dailyHistory = pd.read_sql(f'select * from "{table}"', 
             engine,
             index_col='index',
-            parse_dates=['index'])
-    
+            parse_dates=['index']) 
+    engine.close()
+
     return {
         'data': [dict(
             type='scatter',
