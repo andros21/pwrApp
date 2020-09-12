@@ -2,7 +2,7 @@
 
 ## :blue_book: Description
 
-[Dash app](https://plotly.com/) used as web UI for read/analyze electric power consumption stats collected thanks to [mcce :zap:](https://github.com/andros21/mcce)
+[Dash app](https://plotly.com/) used as web UI for read/analyze electric power consumption stats collected thanks to [:zap: mcce :zap:](https://github.com/andros21/mcce)
 
 ## :star: Features
 
@@ -22,7 +22,7 @@ Steps to run repo/project for a user named `mcce`:
    sudo chown mcce:mcce /opt/MCCE
    mkdir /opt/MCCE/pwrApp
    ```
-2. Clone the repo:
+2. Clone the repo
    ```
    git clone https://github.com/andros21/pwrApp.git /opt/MCCE/pwrApp
    ```
@@ -56,7 +56,7 @@ Steps to run repo/project for a user named `mcce`:
    ```
    
    > **W:** check for `nginx.conf` mistakes using `nginx -c /etc/nginx/nginx.conf -t`
-9. Reload systemd file:
+9. Reload systemd file
    ```
    sudo systemctl daemon-reload
    ```
@@ -65,7 +65,7 @@ Steps to run repo/project for a user named `mcce`:
     sudo systemctl enable nginx.service
     sudo systemctl start nginx.service
     ```
-11. Enable and start `pwrApp.serive` that will trigger uWGSI:
+11. Enable and start `pwrApp.serive` that will trigger uWGSI
     ```
     sudo systemctl enable pwrApp.service
     sudo systemctl start pwrApp.service
