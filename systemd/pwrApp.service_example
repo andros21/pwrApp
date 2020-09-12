@@ -1,0 +1,14 @@
+[Unit]
+Description=uWSGI Instance To Serve pwrApp
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+User=mcce
+Group=www-data
+Environment="DATABASE_URL=/opt/MCCE/pwrApp/pwrApp.sqlite3"
+WorkingDirectory=/opt/MCCE/pwrApp
+ExecStart=/opt/MCCE/pwrApp/bin/uwsgi --ini pwrApp.ini
+
+[Install]
+WantedBy=multi-user.target
