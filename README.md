@@ -42,7 +42,7 @@ Steps to run repo/project for a user named `mcce`:
    sudo chown root:root pwrApp.service
    sudo chmod 0640 pwrApp.service
    ```
-6. Set the `$DATABSE_URL` variable to point to the correct sqlite3 database location where data are saved using [mcce](https://github.com/andros21/mcce), e.g.
+6. Set the `$DATABSE_URL` var to point to the correct sqlite3 database location where data are saved using [mcce](https://github.com/andros21/mcce), e.g.
    ```
    ...
    Environment="DATABASE_URL=/opt/MCCE/pwrApp/pwrApp.sqlite3"
@@ -51,8 +51,8 @@ Steps to run repo/project for a user named `mcce`:
 7. Fire up `nginx`, install it with your favorite package manager, setup as you like `nginx.conf`
 8. Check and edit my base `pwrapp.nginx_example` as you need, then
    ```
-   cp -v nginx/pwrapp.nginx_example /etc/nginx/sites-available/pwrapp
-   ln -s /etc/nginx/sites-available/pwrapp /etc/nginx/sites-enable/pwrapp
+   sudo cp -v nginx/pwrapp.conf_example /etc/nginx/sites-available/pwrapp
+   sudo ln -s /etc/nginx/sites-available/pwrapp /etc/nginx/sites-enable/pwrapp
    ```
    
    > **W:** check for `nginx.conf` mistakes using `nginx -c /etc/nginx/nginx.conf -t`
