@@ -1,0 +1,8 @@
+bin
+etc
+lib
+lib64
+share
+include
+pwrApp.sock
+__pycache__

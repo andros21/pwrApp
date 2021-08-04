@@ -1,0 +1,15 @@
+[Unit]
+Description=uWSGI Instance To Serve pwrApp
+Wants=network-online.target
+After=network.target network-online.target
+OnFailure=@MAIL
+
+[Service]
+User=mcce
+Group=www-data
+Environment="DATABASE_URL=@DB"
+WorkingDirectory=@WD
+ExecStart=@UWSGI --ini pwrApp.ini
+
+[Install]
+WantedBy=multi-user.target
