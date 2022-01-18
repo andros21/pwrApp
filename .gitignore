@@ -1,8 +1,7 @@
 bin
+days
 etc
-lib
-lib64
-share
 include
-pwrApp.sock
-__pycache__
+lib
+pyvenv.cfg
+share
