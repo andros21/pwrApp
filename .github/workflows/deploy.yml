@@ -17,7 +17,7 @@ jobs:
       url: https://epwr-stats.herokuapp.com/
     steps:
       - name: Checkout project
-        uses: actions/checkout@v2.3.5
+        uses: actions/checkout@v2.4.0
       - name: Heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
