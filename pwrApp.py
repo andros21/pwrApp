@@ -61,7 +61,6 @@ def serve_layout():
     # Define daily stats table, and search for
     # different year DBs
     # ----------------------------------------------
-    global dailyStats
     yearDBs = [
         re.search(r"20[2-9][0-9]", os.path.basename(db)).group()
         for db in os.listdir(os.path.dirname(f"{os.environ['DATABASE_URL']}.{dyear}"))
@@ -84,8 +83,10 @@ def serve_layout():
                         marks={int(year): year for year in yearDBs},
                         step=None,
                     ),
-                    dcc.Slider(id="month-slider", className="month-slider"),
                     html.Div(id="serialize-df", style={"display": "none"}),
+                    dcc.Slider(
+                        id="month-slider", min=1, max=12, className="month-slider"
+                    ),
                     dcc.Graph(id="hist-slider", className="hist-slider"),
                     html.Div(
                         className="table-slider",
@@ -155,28 +156,36 @@ app.layout = serve_layout
 
 
 @app.callback(
-    [
-        Output("month-slider", "min"),
-        Output("month-slider", "max"),
-        Output("month-slider", "value"),
-        Output("month-slider", "marks"),
-        Output("month-slider", "step"),
-        Output("serialize-df", "children"),
-    ],
+    Output("serialize-df", "children"),
     Input("year-slider", "value"),
 )
-def update_month(year):
-    """
-    Update month slider as function of
-    selected database year.
-    In case of None use Current year as default year
-    """
+def update_serializer(year):
     db_uri = f"{os.environ['DATABASE_URL']}.{year}" if year is not None else dyear
     engine = sqlite3.connect(db_uri)
     dailyStats = pd.read_sql(
         "select * from avg", engine, index_col="index", parse_dates=["index"]
     )
     engine.close()
+    return dailyStats.to_json()
+
+
+@app.callback(
+    [
+        Output("month-slider", "min"),
+        Output("month-slider", "max"),
+        Output("month-slider", "value"),
+        Output("month-slider", "marks"),
+        Output("month-slider", "step"),
+    ],
+    Input("serialize-df", "children"),
+)
+def update_month(ser):
+    """
+    Update month slider as function of
+    selected database year.
+    In case of None use Current year as default year
+    """
+    dailyStats = pd.read_json(ser)
     return (
         dailyStats.index.month.min(),
         dailyStats.index.month.max(),
@@ -188,7 +197,6 @@ def update_month(year):
             )
         },
         None,
-        dailyStats.to_json(),
     )
 
 
