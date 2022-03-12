@@ -8,8 +8,9 @@ OnFailure=@MAIL
 User=mcce
 Group=www-data
 Environment="DATABASE_URL=@DB"
+Environment="GUNICORN_CMD_ARGS=--workers=3 --bind unix:pwrApp.sock -m 007"
 WorkingDirectory=@WD
-ExecStart=@UWSGI --ini pwrApp.ini
+ExecStart=@WSGI pwrAppWSGI:app
 
 [Install]
 WantedBy=multi-user.target

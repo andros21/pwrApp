@@ -24,12 +24,11 @@ server {
 	listen [::]:8080;
 
 	server_name pwrapp;
-	
-        # uWSGI sock path
+
+        # WSGI sock path
         location / { try_files $uri @pwrApp; }
         location @pwrApp {
-           include uwsgi_params;
-           uwsgi_pass unix:///opt/MCCE/pwrApp/pwrApp.sock;
+           include proxy_params;
+           proxy_pass http://unix://@WD/pwrApp.sock;
         }
 }
-
