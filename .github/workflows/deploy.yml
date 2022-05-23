@@ -19,6 +19,17 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - name: Setuo python
+        uses: actions/setup-python@98f2ad02fd48d057ee3b4d4f66525b231c3e52b6
+        with:
+          python-version: 3.9
+      - name: Install poetry
+        uses: snok/install-poetry@2bf112a0f6979928eb6b011f39700db589c5961e
+        with:
+          virtualenvs-create: false
+      - name: Export requirements.txt
+        run: |
+          poetry export --without-hashes | tail -n +3 > requirements.txt
       - name: Heroku deploy
         uses: akhileshns/heroku-deploy@79ef2ae4ff9b897010907016b268fd0f88561820
         with:
