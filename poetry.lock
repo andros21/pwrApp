@@ -264,7 +264,7 @@ reference = "piwheels"
 
 [[package]]
 name = "pandas"
-version = "1.4.2"
+version = "1.4.3"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
@@ -449,7 +449,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "e7b5ae53bcb3507614a6add0bbf2b43f44df41fe358f512a109fcd3529b45a25"
+content-hash = "82b5357438dca135babeb84586830ba8528e764019772386a7fc2928c35e373a"
 
 [metadata.files]
 brotli = [
@@ -515,8 +515,8 @@ numpy = [
     {file = "numpy-1.22.4-cp39-cp39-linux_armv7l.whl", hash = "sha256:98d1bb536e52326f18cc394ab677e8c438e860f0203607ff70d16857ca4172ba"},
 ]
 pandas = [
-    {file = "pandas-1.4.2-cp39-cp39-linux_armv6l.whl", hash = "sha256:cc455ba74ca8442f70e48f2c70628b2281e5b345864bf5f1d90b20e7135d7007"},
-    {file = "pandas-1.4.2-cp39-cp39-linux_armv7l.whl", hash = "sha256:cc455ba74ca8442f70e48f2c70628b2281e5b345864bf5f1d90b20e7135d7007"},
+    {file = "pandas-1.4.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
+    {file = "pandas-1.4.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
 ]
 plotly = [
     {file = "plotly-5.1.0-py2.py3-none-any.whl", hash = "sha256:d60412ee21d85102f67e5c7134d59feb5e42a5cbbfb1e580ad67cbdf7589d80c"},
