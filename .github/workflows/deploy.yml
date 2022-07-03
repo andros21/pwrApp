@@ -37,7 +37,7 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: epwr-stats
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          dontuseforce: true
+          dontuseforce: false
           dontautocreate: true
           rollbackonhealthcheckfailed: true
           healthcheck: https://epwr-stats.herokuapp.com
