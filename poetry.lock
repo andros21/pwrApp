@@ -42,7 +42,7 @@ reference = "piwheels"
 
 [[package]]
 name = "dash"
-version = "2.4.1"
+version = "2.5.1"
 description = "A Python framework for building reactive web-apps. Developed by Plotly."
 category = "main"
 optional = false
@@ -449,7 +449,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "c390b8bff2a0dd2865cf72d4cb04ae2832ce0fc16e792beb98ac78df559ebe5e"
+content-hash = "efdf4b4c4afc66b5f7ed183bf667780c84d8623ad6d1101f2b90b7b12bd8117d"
 
 [metadata.files]
 brotli = [
@@ -467,7 +467,7 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
 ]
 dash = [
-    {file = "dash-2.4.1-py3-none-any.whl", hash = "sha256:0464b529b4ab303c59bf41eaa8d945a71b2da790ef0180051492073e38f5ea6a"},
+    {file = "dash-2.5.1-py3-none-any.whl", hash = "sha256:ddbb29b4f01e935b0866448edf434f146283716a53d5bd66160ea2754025264d"},
 ]
 dash-core-components = [
     {file = "dash_core_components-2.0.0-py3-none-any.whl", hash = "sha256:934122d0dd70238a5d4e552c816a0b470d34f2143dd0fb521f4ad9623261a557"},
