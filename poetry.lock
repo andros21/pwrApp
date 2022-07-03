@@ -42,7 +42,7 @@ reference = "piwheels"
 
 [[package]]
 name = "dash"
-version = "2.3.1"
+version = "2.5.1"
 description = "A Python framework for building reactive web-apps. Developed by Plotly."
 category = "main"
 optional = false
@@ -58,7 +58,7 @@ plotly = ">=5.0.0"
 
 [package.extras]
 celery = ["redis (>=3.5.3)", "celery[redis] (>=5.1.2)"]
-ci = ["black (==21.6b0)", "click (<8.1)", "dash-flow-example (==0.0.5)", "dash-dangerously-set-inner-html", "flake8 (==3.9.2)", "flaky (==3.7.0)", "flask-talisman (==0.8.1)", "mimesis", "mock (==4.0.3)", "numpy", "preconditions", "pylint (==2.10.2)", "pytest-mock (==3.2.0)", "pytest-sugar (==0.9.4)", "isort (==4.3.21)", "orjson (==3.5.4)", "pyarrow (<3)", "pandas (==1.1.5)", "xlrd (<2)", "orjson (==3.6.3)", "pyarrow", "openpyxl", "pandas (>=1.4.0)", "xlrd (>=2.0.1)"]
+ci = ["dash-flow-example (==0.0.5)", "dash-dangerously-set-inner-html", "flake8 (==3.9.2)", "flaky (==3.7.0)", "flask-talisman (==1.0.0)", "mimesis", "mock (==4.0.3)", "numpy", "preconditions", "pylint (==2.13.5)", "pytest-mock", "pytest-sugar (==0.9.4)", "pytest-rerunfailures", "black (==21.6b0)", "isort (==4.3.21)", "orjson (==3.5.4)", "pyarrow (<3)", "pandas (==1.1.5)", "xlrd (<2)", "black (==22.3.0)", "orjson (==3.6.7)", "pyarrow", "openpyxl", "pandas (>=1.4.0)", "xlrd (>=2.0.1)"]
 dev = ["coloredlogs (>=15.0.1)", "fire (>=0.4.0)", "PyYAML (>=5.4.1)"]
 diskcache = ["diskcache (>=5.2.1)", "multiprocess (>=0.70.12)", "psutil (>=5.8.0)"]
 testing = ["beautifulsoup4 (>=4.8.2)", "lxml (>=4.6.2)", "percy (>=2.0.2)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0)", "waitress (>=1.4.4)", "cryptography (<3.4)"]
@@ -251,7 +251,7 @@ reference = "piwheels"
 
 [[package]]
 name = "numpy"
-version = "1.22.3"
+version = "1.23.0"
 description = "NumPy is the fundamental package for array computing with Python."
 category = "main"
 optional = false
@@ -264,7 +264,7 @@ reference = "piwheels"
 
 [[package]]
 name = "pandas"
-version = "1.4.2"
+version = "1.4.3"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
@@ -362,7 +362,7 @@ reference = "piwheels"
 
 [[package]]
 name = "sqlalchemy"
-version = "1.4.36"
+version = "1.4.39"
 description = "Database Abstraction Library"
 category = "main"
 optional = false
@@ -386,7 +386,7 @@ mysql_connector = ["mysql-connector-python"]
 oracle = ["cx-oracle (>=7,<8)", "cx-oracle (>=7)"]
 postgresql = ["psycopg2 (>=2.7)"]
 postgresql_asyncpg = ["greenlet (!=0.4.17)", "asyncpg"]
-postgresql_pg8000 = ["pg8000 (>=1.16.6)"]
+postgresql_pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
 postgresql_psycopg2binary = ["psycopg2-binary"]
 postgresql_psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql (<1)", "pymysql"]
@@ -449,7 +449,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "1edef729fc3abc9e456cadc1af6a79bf79773d019f3a073fb766d3014ff52921"
+content-hash = "efdf4b4c4afc66b5f7ed183bf667780c84d8623ad6d1101f2b90b7b12bd8117d"
 
 [metadata.files]
 brotli = [
@@ -467,7 +467,7 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
 ]
 dash = [
-    {file = "dash-2.3.1-py3-none-any.whl", hash = "sha256:becfd3cf3a4d3e2200be07cd941d85a2d0220c2a7f7cc943d138ac5717505f06"},
+    {file = "dash-2.5.1-py3-none-any.whl", hash = "sha256:ddbb29b4f01e935b0866448edf434f146283716a53d5bd66160ea2754025264d"},
 ]
 dash-core-components = [
     {file = "dash_core_components-2.0.0-py3-none-any.whl", hash = "sha256:934122d0dd70238a5d4e552c816a0b470d34f2143dd0fb521f4ad9623261a557"},
@@ -511,12 +511,12 @@ markupsafe = [
     {file = "MarkupSafe-2.1.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:635983650c67c69118fe07c52f799b789d17edb9051777476b646278602d47dd"},
 ]
 numpy = [
-    {file = "numpy-1.22.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:82df998306893fcabebce6f0a86a87b10b0486de08dde77423ef81b37da0b3ba"},
-    {file = "numpy-1.22.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:82df998306893fcabebce6f0a86a87b10b0486de08dde77423ef81b37da0b3ba"},
+    {file = "numpy-1.23.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:9b16b8dccbcdf664d4060861272a5bc4a5c9e7fbfc6154a774fcef1e7b9107ae"},
+    {file = "numpy-1.23.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:9b16b8dccbcdf664d4060861272a5bc4a5c9e7fbfc6154a774fcef1e7b9107ae"},
 ]
 pandas = [
-    {file = "pandas-1.4.2-cp39-cp39-linux_armv6l.whl", hash = "sha256:cc455ba74ca8442f70e48f2c70628b2281e5b345864bf5f1d90b20e7135d7007"},
-    {file = "pandas-1.4.2-cp39-cp39-linux_armv7l.whl", hash = "sha256:cc455ba74ca8442f70e48f2c70628b2281e5b345864bf5f1d90b20e7135d7007"},
+    {file = "pandas-1.4.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
+    {file = "pandas-1.4.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
 ]
 plotly = [
     {file = "plotly-5.1.0-py2.py3-none-any.whl", hash = "sha256:d60412ee21d85102f67e5c7134d59feb5e42a5cbbfb1e580ad67cbdf7589d80c"},
@@ -537,10 +537,10 @@ six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
 ]
 sqlalchemy = [
-    {file = "SQLAlchemy-1.4.36-cp37-cp37m-linux_armv6l.whl", hash = "sha256:2030d983a2f541ff47de557dbbbeb4fcecf0edfcc74340cf0b31d3e381569dd5"},
-    {file = "SQLAlchemy-1.4.36-cp37-cp37m-linux_armv7l.whl", hash = "sha256:2030d983a2f541ff47de557dbbbeb4fcecf0edfcc74340cf0b31d3e381569dd5"},
-    {file = "SQLAlchemy-1.4.36-cp39-cp39-linux_armv6l.whl", hash = "sha256:bf9472a75af5e1398f51ac3b8f4422548614ad5656e3182e2a8825f9968af4df"},
-    {file = "SQLAlchemy-1.4.36-cp39-cp39-linux_armv7l.whl", hash = "sha256:bf9472a75af5e1398f51ac3b8f4422548614ad5656e3182e2a8825f9968af4df"},
+    {file = "SQLAlchemy-1.4.39-cp37-cp37m-linux_armv6l.whl", hash = "sha256:1392a9734fc53b475ed2b96242e8a9c6e2b77e7314dc0dd9d43e04bbf4b372d1"},
+    {file = "SQLAlchemy-1.4.39-cp37-cp37m-linux_armv7l.whl", hash = "sha256:1392a9734fc53b475ed2b96242e8a9c6e2b77e7314dc0dd9d43e04bbf4b372d1"},
+    {file = "SQLAlchemy-1.4.39-cp39-cp39-linux_armv6l.whl", hash = "sha256:932534e11a4ab595b8f022b307c9fa492cdce6c4eed0005c058945f8b200e390"},
+    {file = "SQLAlchemy-1.4.39-cp39-cp39-linux_armv7l.whl", hash = "sha256:932534e11a4ab595b8f022b307c9fa492cdce6c4eed0005c058945f8b200e390"},
 ]
 tenacity = [
     {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},

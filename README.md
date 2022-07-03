@@ -22,7 +22,7 @@ Steps to run repo/project:
    ```
 2. Create a python environment with packages needed
    ```
-   (pwrApp) pip install -r requirements.txt
+   poetry install --no-root --no-dev
    ```
 3. Copy systemd service template file inside `/etc/systemd/system/`
 5. Change file permissions, that must be `-rw-r-----  root root`

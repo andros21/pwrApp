@@ -19,8 +19,8 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-      - name: Setuo python
-        uses: actions/setup-python@98f2ad02fd48d057ee3b4d4f66525b231c3e52b6
+      - name: Setup python
+        uses: actions/setup-python@d09bd5e6005b175076f227b13d9730d56e9dcfcb
         with:
           python-version: 3.9
       - name: Install poetry
@@ -37,3 +37,8 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: epwr-stats
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          dontuseforce: false
+          dontautocreate: true
+          rollbackonhealthcheckfailed: true
+          healthcheck: https://epwr-stats.herokuapp.com
+          delay: 7
