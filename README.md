@@ -28,9 +28,9 @@ Steps to run repo/project:
 5. Change file permissions, that must be `-rw-r-----  root root`
 6. Configure it, edit them as you need/want
 7. Fire up `nginx`, install it with your package manager, setup as you like `nginx.conf`
-8. Check and edit my base `pwrapp.nginx_example` as you need, then
+8. Check and edit my base `pwrapp.conf.j2` as you need, then
    ```
-   sudo cp -v nginx/pwrapp.conf_example /etc/nginx/sites-available/pwrapp.conf
+   sudo cp -v nginx/pwrapp.conf.j2 /etc/nginx/sites-available/pwrapp.conf
    sudo ln -s /etc/nginx/sites-available/pwrapp.conf /etc/nginx/sites-enable/pwrapp.conf
    ```
 
