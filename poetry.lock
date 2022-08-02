@@ -109,7 +109,7 @@ reference = "piwheels"
 
 [[package]]
 name = "flask"
-version = "2.1.2"
+version = "2.2.0"
 description = "A simple framework for building complex web applications."
 category = "main"
 optional = false
@@ -120,7 +120,7 @@ click = ">=8.0"
 importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
 itsdangerous = ">=2.0"
 Jinja2 = ">=3.0"
-Werkzeug = ">=2.0"
+Werkzeug = ">=2.2.0"
 
 [package.extras]
 async = ["asgiref (>=3.2)"]
@@ -415,11 +415,14 @@ reference = "piwheels"
 
 [[package]]
 name = "werkzeug"
-version = "2.1.2"
+version = "2.2.1"
 description = "The comprehensive WSGI web application library."
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
 
 [package.extras]
 watchdog = ["watchdog"]
@@ -449,7 +452,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "be035b91d7df2d85e4e369cba2c376ab2f064c62e76c703aa78cd347325f6373"
+content-hash = "be6dd23d08556f004f1113e8a49181f668987f15a9223f93fe272cff1b792679"
 
 [metadata.files]
 brotli = [
@@ -479,7 +482,7 @@ dash-table = [
     {file = "dash_table-5.0.0-py3-none-any.whl", hash = "sha256:e3c7247bfd47c09ac8d5fa9a90535157721da00e97e1b527aff160675e86d7e9"},
 ]
 flask = [
-    {file = "Flask-2.1.2-py3-none-any.whl", hash = "sha256:77da11da8461d56cbb2c672f7ec416da9c0045c59b440615d583df0b48237956"},
+    {file = "Flask-2.2.0-py3-none-any.whl", hash = "sha256:832e9b9b99fc03b1f6e9bb8b63f62c93fb61719b686145edf96688c5a491f9fc"},
 ]
 flask-compress = [
     {file = "Flask_Compress-1.12-py3-none-any.whl", hash = "sha256:d112edce663c9b95ec2eb6198c6cd2fa0a87610aed7ddb623a839e605af5050a"},
@@ -546,7 +549,7 @@ tenacity = [
     {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},
 ]
 werkzeug = [
-    {file = "Werkzeug-2.1.2-py3-none-any.whl", hash = "sha256:4d260aa38109dff6d33f5566f6899c407c1dd72281605ccbc8ab97f927751650"},
+    {file = "Werkzeug-2.2.1-py3-none-any.whl", hash = "sha256:2ee70d7fc005d75d3d3c20c6f2ff482822a53d5b664298b0ab6f82adceffb133"},
 ]
 zipp = [
     {file = "zipp-3.8.0-py3-none-any.whl", hash = "sha256:e24662099d38dd8d5f683affd104a4c9dc2562647ad1c0af6ff04e0adffd7812"},
