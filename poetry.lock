@@ -251,7 +251,7 @@ reference = "piwheels"
 
 [[package]]
 name = "numpy"
-version = "1.23.1"
+version = "1.23.2"
 description = "NumPy is the fundamental package for array computing with Python."
 category = "main"
 optional = false
@@ -452,7 +452,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "7fad4ea2351c19860b0c467471aa0892031b01547c68f18934b2a9638968bc2c"
+content-hash = "1fa1834e42a1aaa541b936d9fc08df4e8209214aad3786054e0ae38230ba5676"
 
 [metadata.files]
 brotli = [
@@ -514,8 +514,8 @@ markupsafe = [
     {file = "MarkupSafe-2.1.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:635983650c67c69118fe07c52f799b789d17edb9051777476b646278602d47dd"},
 ]
 numpy = [
-    {file = "numpy-1.23.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:c445b798864ecce1dc932b1b530163300db9f8d57eb0c10f31f4661aa70bc15e"},
-    {file = "numpy-1.23.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:c445b798864ecce1dc932b1b530163300db9f8d57eb0c10f31f4661aa70bc15e"},
+    {file = "numpy-1.23.2-cp39-cp39-linux_armv6l.whl", hash = "sha256:5d68d23c3fe223090e48528512a2286c8609cd379ebe3503cd19de564ef211ce"},
+    {file = "numpy-1.23.2-cp39-cp39-linux_armv7l.whl", hash = "sha256:5d68d23c3fe223090e48528512a2286c8609cd379ebe3503cd19de564ef211ce"},
 ]
 pandas = [
     {file = "pandas-1.4.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
