@@ -42,7 +42,7 @@ reference = "piwheels"
 
 [[package]]
 name = "dash"
-version = "2.6.0"
+version = "2.6.2"
 description = "A Python framework for building reactive web-apps. Developed by Plotly."
 category = "main"
 optional = false
@@ -61,7 +61,7 @@ celery = ["celery[redis] (>=5.1.2)", "redis (>=3.5.3)"]
 ci = ["black (==21.6b0)", "black (==22.3.0)", "dash-dangerously-set-inner-html", "dash-flow-example (==0.0.5)", "flake8 (==3.9.2)", "flaky (==3.7.0)", "flask-talisman (==1.0.0)", "isort (==4.3.21)", "mimesis", "mock (==4.0.3)", "numpy", "openpyxl", "orjson (==3.5.4)", "orjson (==3.6.7)", "pandas (==1.1.5)", "pandas (>=1.4.0)", "preconditions", "pyarrow", "pyarrow (<3)", "pylint (==2.13.5)", "pytest-mock", "pytest-rerunfailures", "pytest-sugar (==0.9.4)", "xlrd (<2)", "xlrd (>=2.0.1)"]
 dev = ["PyYAML (>=5.4.1)", "coloredlogs (>=15.0.1)", "fire (>=0.4.0)"]
 diskcache = ["diskcache (>=5.2.1)", "multiprocess (>=0.70.12)", "psutil (>=5.8.0)"]
-testing = ["beautifulsoup4 (>=4.8.2)", "cryptography (<3.4)", "lxml (>=4.6.2)", "percy (>=2.0.2)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0,<=4.2.0)", "waitress (>=1.4.4)"]
+testing = ["beautifulsoup4 (>=4.8.2)", "cryptography (<3.4)", "lxml (>=4.6.2)", "multiprocess (>=0.70.12)", "percy (>=2.0.2)", "psutil (>=5.8.0)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0,<=4.2.0)", "waitress (>=1.4.4)"]
 
 [package.source]
 type = "legacy"
@@ -471,7 +471,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "e9345bb16f95ff340983da1bcde022343c5c2b91af39708a218d0746477e1213"
+content-hash = "9f327248e3dc4fc959878ae49e850601f5dc80c6e2967c456de85a4bba0f0051"
 
 [metadata.files]
 brotli = [
@@ -489,7 +489,7 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
 ]
 dash = [
-    {file = "dash-2.6.0-py3-none-any.whl", hash = "sha256:14b1ef6a6e8df2fbdc58f7301a22c6bda9cbb86303f6b637703c0b6348bd9c44"},
+    {file = "dash-2.6.2-py3-none-any.whl", hash = "sha256:33ec94add3bcad655f510a5b3b07a8d1d97e733e602c30531b506a9e500c0ad4"},
 ]
 dash-core-components = [
     {file = "dash_core_components-2.0.0-py3-none-any.whl", hash = "sha256:934122d0dd70238a5d4e552c816a0b470d34f2143dd0fb521f4ad9623261a557"},
