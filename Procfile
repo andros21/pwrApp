@@ -1,1 +1,0 @@
-web: gunicorn pwrApp:server
