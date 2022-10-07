@@ -37,7 +37,7 @@ app.title = "ePwr Stats"
 
 # Default vars
 # -------------
-db_uri = os.environ["DATABASE_URL"].replace("postgres", "postgresql")
+db_uri = os.environ["DATABASE_URL"].replace("postgres://", "postgresql://")
 dyear = int((datetime.datetime.now() - datetime.timedelta(days=1)).year)
 dmonth = 1
 dday = 1
