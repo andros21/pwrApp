@@ -1,0 +1,11 @@
+*tags*
+.dockerignore
+.git/*
+.github/*
+.gitignore
+LICENSE
+README.md
+__pycache__/*
+requirements-dev.txt
+nginx/*
+systemd/*
