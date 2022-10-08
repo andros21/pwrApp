@@ -35,7 +35,7 @@ from flask import Flask
 # --------------------------------
 server = Flask(__name__)
 app = dash.Dash(__name__, server)
-app.title = "ePwr Stats"
+app.title = "pwrApp"
 
 # Default vars
 # -------------
@@ -430,4 +430,4 @@ def update_pie(year, ser):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run_server()
