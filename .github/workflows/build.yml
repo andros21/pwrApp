@@ -2,6 +2,7 @@
 name: build pwrapp
 
 "on":
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -29,6 +30,8 @@ jobs:
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: checkout project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+        with:
+          ref: flyio
       - name: setup python
         uses: actions/setup-python@b55428b1882923874294fa556849718a1d7f2ca5
         with:
