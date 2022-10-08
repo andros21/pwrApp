@@ -42,7 +42,7 @@ reference = "piwheels"
 
 [[package]]
 name = "dash"
-version = "2.5.1"
+version = "2.6.2"
 description = "A Python framework for building reactive web-apps. Developed by Plotly."
 category = "main"
 optional = false
@@ -57,11 +57,11 @@ flask-compress = "*"
 plotly = ">=5.0.0"
 
 [package.extras]
-celery = ["redis (>=3.5.3)", "celery[redis] (>=5.1.2)"]
-ci = ["dash-flow-example (==0.0.5)", "dash-dangerously-set-inner-html", "flake8 (==3.9.2)", "flaky (==3.7.0)", "flask-talisman (==1.0.0)", "mimesis", "mock (==4.0.3)", "numpy", "preconditions", "pylint (==2.13.5)", "pytest-mock", "pytest-sugar (==0.9.4)", "pytest-rerunfailures", "black (==21.6b0)", "isort (==4.3.21)", "orjson (==3.5.4)", "pyarrow (<3)", "pandas (==1.1.5)", "xlrd (<2)", "black (==22.3.0)", "orjson (==3.6.7)", "pyarrow", "openpyxl", "pandas (>=1.4.0)", "xlrd (>=2.0.1)"]
-dev = ["coloredlogs (>=15.0.1)", "fire (>=0.4.0)", "PyYAML (>=5.4.1)"]
+celery = ["celery[redis] (>=5.1.2)", "redis (>=3.5.3)"]
+ci = ["black (==21.6b0)", "black (==22.3.0)", "dash-dangerously-set-inner-html", "dash-flow-example (==0.0.5)", "flake8 (==3.9.2)", "flaky (==3.7.0)", "flask-talisman (==1.0.0)", "isort (==4.3.21)", "mimesis", "mock (==4.0.3)", "numpy", "openpyxl", "orjson (==3.5.4)", "orjson (==3.6.7)", "pandas (==1.1.5)", "pandas (>=1.4.0)", "preconditions", "pyarrow", "pyarrow (<3)", "pylint (==2.13.5)", "pytest-mock", "pytest-rerunfailures", "pytest-sugar (==0.9.4)", "xlrd (<2)", "xlrd (>=2.0.1)"]
+dev = ["PyYAML (>=5.4.1)", "coloredlogs (>=15.0.1)", "fire (>=0.4.0)"]
 diskcache = ["diskcache (>=5.2.1)", "multiprocess (>=0.70.12)", "psutil (>=5.8.0)"]
-testing = ["beautifulsoup4 (>=4.8.2)", "lxml (>=4.6.2)", "percy (>=2.0.2)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0)", "waitress (>=1.4.4)", "cryptography (<3.4)"]
+testing = ["beautifulsoup4 (>=4.8.2)", "cryptography (<3.4)", "lxml (>=4.6.2)", "multiprocess (>=0.70.12)", "percy (>=2.0.2)", "psutil (>=5.8.0)", "pytest (>=6.0.2)", "requests[security] (>=2.21.0)", "selenium (>=3.141.0,<=4.2.0)", "waitress (>=1.4.4)"]
 
 [package.source]
 type = "legacy"
@@ -109,7 +109,7 @@ reference = "piwheels"
 
 [[package]]
 name = "flask"
-version = "2.1.2"
+version = "2.2.0"
 description = "A simple framework for building complex web applications."
 category = "main"
 optional = false
@@ -120,7 +120,7 @@ click = ">=8.0"
 importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
 itsdangerous = ">=2.0"
 Jinja2 = ">=3.0"
-Werkzeug = ">=2.0"
+Werkzeug = ">=2.2.0"
 
 [package.extras]
 async = ["asgiref (>=3.2)"]
@@ -157,7 +157,7 @@ optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 
 [package.extras]
-docs = ["sphinx"]
+docs = ["Sphinx"]
 
 [package.source]
 type = "legacy"
@@ -171,6 +171,9 @@ description = "WSGI HTTP Server for UNIX"
 category = "main"
 optional = false
 python-versions = ">=3.5"
+
+[package.dependencies]
+setuptools = ">=3.0"
 
 [package.extras]
 eventlet = ["eventlet (>=0.24.1)"]
@@ -195,9 +198,9 @@ python-versions = ">=3.7"
 zipp = ">=0.5"
 
 [package.extras]
-docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)"]
+docs = ["jaraco.packaging (>=9)", "rst.linker (>=1.9)", "sphinx"]
 perf = ["ipython"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
+testing = ["flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf (>=0.9.2)"]
 
 [package.source]
 type = "legacy"
@@ -251,7 +254,7 @@ reference = "piwheels"
 
 [[package]]
 name = "numpy"
-version = "1.23.0"
+version = "1.23.3"
 description = "NumPy is the fundamental package for array computing with Python."
 category = "main"
 optional = false
@@ -264,7 +267,7 @@ reference = "piwheels"
 
 [[package]]
 name = "pandas"
-version = "1.4.3"
+version = "1.5.0"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
@@ -272,9 +275,7 @@ python-versions = ">=3.8"
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.18.5", markers = "platform_machine != \"aarch64\" and platform_machine != \"arm64\" and python_version < \"3.10\""},
-    {version = ">=1.19.2", markers = "platform_machine == \"aarch64\" and python_version < \"3.10\""},
-    {version = ">=1.20.0", markers = "platform_machine == \"arm64\" and python_version < \"3.10\""},
+    {version = ">=1.20.3", markers = "python_version < \"3.10\""},
     {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
 ]
 python-dateutil = ">=2.8.1"
@@ -306,8 +307,8 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
-name = "psycopg2"
-version = "2.9.3"
+name = "psycopg2-binary"
+version = "2.9.4"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
@@ -348,6 +349,24 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "setuptools"
+version = "65.4.1"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-hoverxref (<2)", "sphinx-inline-tabs", "sphinx-notfound-page (==0.8.3)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
+testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8 (<5)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "mock", "pip (>=19.1)", "pip-run (>=8.8)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
+testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -362,7 +381,7 @@ reference = "piwheels"
 
 [[package]]
 name = "sqlalchemy"
-version = "1.4.39"
+version = "1.4.41"
 description = "Database Abstraction Library"
 category = "main"
 optional = false
@@ -372,24 +391,24 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
 greenlet = {version = "!=0.4.17", markers = "python_version >= \"3\" and (platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\")"}
 
 [package.extras]
-aiomysql = ["greenlet (!=0.4.17)", "aiomysql"]
-aiosqlite = ["typing-extensions (!=3.10.0.1)", "greenlet (!=0.4.17)", "aiosqlite"]
+aiomysql = ["aiomysql", "greenlet (!=0.4.17)"]
+aiosqlite = ["aiosqlite", "greenlet (!=0.4.17)", "typing-extensions (!=3.10.0.1)"]
 asyncio = ["greenlet (!=0.4.17)"]
-asyncmy = ["greenlet (!=0.4.17)", "asyncmy (>=0.2.3,!=0.2.4)"]
-mariadb_connector = ["mariadb (>=1.0.1)"]
+asyncmy = ["asyncmy (>=0.2.3,!=0.2.4)", "greenlet (!=0.4.17)"]
+mariadb_connector = ["mariadb (>=1.0.1,!=1.1.2)"]
 mssql = ["pyodbc"]
 mssql_pymssql = ["pymssql"]
 mssql_pyodbc = ["pyodbc"]
-mypy = ["sqlalchemy2-stubs", "mypy (>=0.910)"]
-mysql = ["mysqlclient (>=1.4.0,<2)", "mysqlclient (>=1.4.0)"]
+mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
+mysql = ["mysqlclient (>=1.4.0)", "mysqlclient (>=1.4.0,<2)"]
 mysql_connector = ["mysql-connector-python"]
-oracle = ["cx-oracle (>=7,<8)", "cx-oracle (>=7)"]
+oracle = ["cx-oracle (>=7)", "cx-oracle (>=7,<8)"]
 postgresql = ["psycopg2 (>=2.7)"]
-postgresql_asyncpg = ["greenlet (!=0.4.17)", "asyncpg"]
+postgresql_asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
 postgresql_pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
 postgresql_psycopg2binary = ["psycopg2-binary"]
 postgresql_psycopg2cffi = ["psycopg2cffi"]
-pymysql = ["pymysql (<1)", "pymysql"]
+pymysql = ["pymysql", "pymysql (<1)"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [package.source]
@@ -415,11 +434,14 @@ reference = "piwheels"
 
 [[package]]
 name = "werkzeug"
-version = "2.1.2"
+version = "2.2.1"
 description = "The comprehensive WSGI web application library."
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
 
 [package.extras]
 watchdog = ["watchdog"]
@@ -438,8 +460,8 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+docs = ["jaraco.packaging (>=9)", "rst.linker (>=1.9)", "sphinx"]
+testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.0.1)", "pytest-flake8", "pytest-mypy (>=0.9.1)"]
 
 [package.source]
 type = "legacy"
@@ -449,7 +471,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "efdf4b4c4afc66b5f7ed183bf667780c84d8623ad6d1101f2b90b7b12bd8117d"
+content-hash = "81e071d79c76dacfab851d41bc91e737a7bbde0e8cc283e26f85663afbb71fec"
 
 [metadata.files]
 brotli = [
@@ -467,7 +489,7 @@ colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
 ]
 dash = [
-    {file = "dash-2.5.1-py3-none-any.whl", hash = "sha256:ddbb29b4f01e935b0866448edf434f146283716a53d5bd66160ea2754025264d"},
+    {file = "dash-2.6.2-py3-none-any.whl", hash = "sha256:33ec94add3bcad655f510a5b3b07a8d1d97e733e602c30531b506a9e500c0ad4"},
 ]
 dash-core-components = [
     {file = "dash_core_components-2.0.0-py3-none-any.whl", hash = "sha256:934122d0dd70238a5d4e552c816a0b470d34f2143dd0fb521f4ad9623261a557"},
@@ -479,7 +501,7 @@ dash-table = [
     {file = "dash_table-5.0.0-py3-none-any.whl", hash = "sha256:e3c7247bfd47c09ac8d5fa9a90535157721da00e97e1b527aff160675e86d7e9"},
 ]
 flask = [
-    {file = "Flask-2.1.2-py3-none-any.whl", hash = "sha256:77da11da8461d56cbb2c672f7ec416da9c0045c59b440615d583df0b48237956"},
+    {file = "Flask-2.2.0-py3-none-any.whl", hash = "sha256:832e9b9b99fc03b1f6e9bb8b63f62c93fb61719b686145edf96688c5a491f9fc"},
 ]
 flask-compress = [
     {file = "Flask_Compress-1.12-py3-none-any.whl", hash = "sha256:d112edce663c9b95ec2eb6198c6cd2fa0a87610aed7ddb623a839e605af5050a"},
@@ -511,21 +533,21 @@ markupsafe = [
     {file = "MarkupSafe-2.1.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:635983650c67c69118fe07c52f799b789d17edb9051777476b646278602d47dd"},
 ]
 numpy = [
-    {file = "numpy-1.23.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:9b16b8dccbcdf664d4060861272a5bc4a5c9e7fbfc6154a774fcef1e7b9107ae"},
-    {file = "numpy-1.23.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:9b16b8dccbcdf664d4060861272a5bc4a5c9e7fbfc6154a774fcef1e7b9107ae"},
+    {file = "numpy-1.23.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:a1793f03c0cb1adcb1743028f0dcddd99275f5162c027928097f31c831bf7108"},
+    {file = "numpy-1.23.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:a1793f03c0cb1adcb1743028f0dcddd99275f5162c027928097f31c831bf7108"},
 ]
 pandas = [
-    {file = "pandas-1.4.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
-    {file = "pandas-1.4.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:bf88d8bb301b50303435602240370806d0f20c06a9ee02e3b8340683e69c6d72"},
+    {file = "pandas-1.5.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:b82cc524b486524dbca59b3de14ace4ef28820d1e777382a10d2b6b7c2908c34"},
+    {file = "pandas-1.5.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:b82cc524b486524dbca59b3de14ace4ef28820d1e777382a10d2b6b7c2908c34"},
 ]
 plotly = [
     {file = "plotly-5.1.0-py2.py3-none-any.whl", hash = "sha256:d60412ee21d85102f67e5c7134d59feb5e42a5cbbfb1e580ad67cbdf7589d80c"},
 ]
-psycopg2 = [
-    {file = "psycopg2-2.9.3-cp37-cp37m-linux_armv6l.whl", hash = "sha256:36ceaf32c01b370a814666ce42250963118c7770e88676399ea7b1b9edb792f6"},
-    {file = "psycopg2-2.9.3-cp37-cp37m-linux_armv7l.whl", hash = "sha256:36ceaf32c01b370a814666ce42250963118c7770e88676399ea7b1b9edb792f6"},
-    {file = "psycopg2-2.9.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:70b7ec3da97c25180541748b35af546a2fc2692ee26fd751092b55a1b6952d1e"},
-    {file = "psycopg2-2.9.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:70b7ec3da97c25180541748b35af546a2fc2692ee26fd751092b55a1b6952d1e"},
+psycopg2-binary = [
+    {file = "psycopg2_binary-2.9.4-cp37-cp37m-linux_armv6l.whl", hash = "sha256:c6571b5d7e9017739dbf98a60c622f3fe938a84f85c058e72722cba6ab10b04a"},
+    {file = "psycopg2_binary-2.9.4-cp37-cp37m-linux_armv7l.whl", hash = "sha256:c6571b5d7e9017739dbf98a60c622f3fe938a84f85c058e72722cba6ab10b04a"},
+    {file = "psycopg2_binary-2.9.4-cp39-cp39-linux_armv6l.whl", hash = "sha256:c2dd565497a949badceae7d6b4b970649ff3a71cef639a5ac6da828c446e57bd"},
+    {file = "psycopg2_binary-2.9.4-cp39-cp39-linux_armv7l.whl", hash = "sha256:c2dd565497a949badceae7d6b4b970649ff3a71cef639a5ac6da828c446e57bd"},
 ]
 python-dateutil = [
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
@@ -533,20 +555,23 @@ python-dateutil = [
 pytz = [
     {file = "pytz-2022.1-py3-none-any.whl", hash = "sha256:d7c0502dc1bc5e1a1a447a7527f99ddf7a302c0f83367ed442b6b3c38c38286d"},
 ]
+setuptools = [
+    {file = "setuptools-65.4.1-py3-none-any.whl", hash = "sha256:dedd3ff536626958f1723c8150f4ac12b5e973476eaf1bdad5fdf28268b9607d"},
+]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
 ]
 sqlalchemy = [
-    {file = "SQLAlchemy-1.4.39-cp37-cp37m-linux_armv6l.whl", hash = "sha256:1392a9734fc53b475ed2b96242e8a9c6e2b77e7314dc0dd9d43e04bbf4b372d1"},
-    {file = "SQLAlchemy-1.4.39-cp37-cp37m-linux_armv7l.whl", hash = "sha256:1392a9734fc53b475ed2b96242e8a9c6e2b77e7314dc0dd9d43e04bbf4b372d1"},
-    {file = "SQLAlchemy-1.4.39-cp39-cp39-linux_armv6l.whl", hash = "sha256:932534e11a4ab595b8f022b307c9fa492cdce6c4eed0005c058945f8b200e390"},
-    {file = "SQLAlchemy-1.4.39-cp39-cp39-linux_armv7l.whl", hash = "sha256:932534e11a4ab595b8f022b307c9fa492cdce6c4eed0005c058945f8b200e390"},
+    {file = "SQLAlchemy-1.4.41-cp37-cp37m-linux_armv6l.whl", hash = "sha256:dcb9ad99802c9d2e6a1f390bd5b9adcb6125da8503086c36e8599ea62ba93f8b"},
+    {file = "SQLAlchemy-1.4.41-cp37-cp37m-linux_armv7l.whl", hash = "sha256:dcb9ad99802c9d2e6a1f390bd5b9adcb6125da8503086c36e8599ea62ba93f8b"},
+    {file = "SQLAlchemy-1.4.41-cp39-cp39-linux_armv6l.whl", hash = "sha256:1b532813babb94874dd8f47935deb9926951d53cdd7bd2b857297e36c366d0bd"},
+    {file = "SQLAlchemy-1.4.41-cp39-cp39-linux_armv7l.whl", hash = "sha256:1b532813babb94874dd8f47935deb9926951d53cdd7bd2b857297e36c366d0bd"},
 ]
 tenacity = [
     {file = "tenacity-8.0.1-py3-none-any.whl", hash = "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"},
 ]
 werkzeug = [
-    {file = "Werkzeug-2.1.2-py3-none-any.whl", hash = "sha256:4d260aa38109dff6d33f5566f6899c407c1dd72281605ccbc8ab97f927751650"},
+    {file = "Werkzeug-2.2.1-py3-none-any.whl", hash = "sha256:2ee70d7fc005d75d3d3c20c6f2ff482822a53d5b664298b0ab6f82adceffb133"},
 ]
 zipp = [
     {file = "zipp-3.8.0-py3-none-any.whl", hash = "sha256:e24662099d38dd8d5f683affd104a4c9dc2562647ad1c0af6ff04e0adffd7812"},

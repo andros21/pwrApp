@@ -2,15 +2,15 @@
 Description=uWSGI Instance To Serve pwrApp
 Wants=network-online.target
 After=network.target network-online.target
-OnFailure=@MAIL
+OnFailure={{ systemd_mailer }}
 
 [Service]
 User=mcce
 Group=www-data
-Environment="DATABASE_URL=@DB"
+Environment="DATABASE_URL={{ database_url }}"
 Environment="GUNICORN_CMD_ARGS=--workers=3 --bind unix:pwrApp.sock -m 007"
-WorkingDirectory=@WD
-ExecStart=@WSGI pwrAppWSGI:app
+WorkingDirectory={{ working_dir }}
+ExecStart={{ wsgi_path }} pwrAppWSGI:app
 
 [Install]
 WantedBy=multi-user.target

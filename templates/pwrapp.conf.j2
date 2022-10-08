@@ -20,15 +20,15 @@
 #
 
 server {
-	listen 8080;
-	listen [::]:8080;
+   listen 8080;
+   listen [::]:8080;
 
-	server_name pwrapp;
+   server_name pwrapp;
 
         # WSGI sock path
         location / { try_files $uri @pwrApp; }
         location @pwrApp {
            include proxy_params;
-           proxy_pass http://unix://@WD/pwrApp.sock;
+           proxy_pass http://unix://{{ working_dir }}/pwrApp.sock;
         }
 }

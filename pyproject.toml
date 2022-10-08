@@ -7,14 +7,14 @@ authors     = ["andros21 <andrea.ros21@e.email>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
-numpy = "^1.23.0"
-pandas = "^1.4.3"
+numpy = "^1.23.3"
+pandas = "^1.5.0"
 plotly = "^5.1.0"
-sqlalchemy = "^1.4.39"
-flask = "^2.1.2"
+sqlalchemy = "^1.4.41"
+flask = "^2.2.0"
 gunicorn = "^20.1.0"
-dash = "^2.5.1"
-psycopg2 = "^2.9.3"
+dash = "^2.6.2"
+psycopg2-binary = "^2.9.3"
 
 [tool.poetry.dev-dependencies]
 
