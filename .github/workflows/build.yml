@@ -7,6 +7,7 @@ name: build pwrapp
     branches:
       - master
     paths:
+      - assets/*
       - Dockerfile
       - poetry.lock
       - pyproject.toml
