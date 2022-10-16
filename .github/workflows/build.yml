@@ -49,7 +49,7 @@ jobs:
         run: |
           LATEST=$(curl -sL https://api.github.com/repos/sigstore/cosign/releases/latest | jq -r ".tag_name")
           echo "cosign version: ${LATEST}"
-          echo "##[set-output name=latest;]${LATEST}"
+          echo "latest=${LATEST}" >> $GITHUB_OUTPUT
       - name: check cosign cache
         uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7
         id: cosign-cache
