@@ -267,7 +267,7 @@ reference = "piwheels"
 
 [[package]]
 name = "pandas"
-version = "1.5.0"
+version = "1.5.1"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
@@ -395,19 +395,19 @@ aiomysql = ["aiomysql", "greenlet (!=0.4.17)"]
 aiosqlite = ["aiosqlite", "greenlet (!=0.4.17)", "typing-extensions (!=3.10.0.1)"]
 asyncio = ["greenlet (!=0.4.17)"]
 asyncmy = ["asyncmy (>=0.2.3,!=0.2.4)", "greenlet (!=0.4.17)"]
-mariadb_connector = ["mariadb (>=1.0.1,!=1.1.2)"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2)"]
 mssql = ["pyodbc"]
-mssql_pymssql = ["pymssql"]
-mssql_pyodbc = ["pyodbc"]
+mssql-pymssql = ["pymssql"]
+mssql-pyodbc = ["pyodbc"]
 mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
 mysql = ["mysqlclient (>=1.4.0)", "mysqlclient (>=1.4.0,<2)"]
-mysql_connector = ["mysql-connector-python"]
+mysql-connector = ["mysql-connector-python"]
 oracle = ["cx-oracle (>=7)", "cx-oracle (>=7,<8)"]
 postgresql = ["psycopg2 (>=2.7)"]
-postgresql_asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
-postgresql_pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
-postgresql_psycopg2binary = ["psycopg2-binary"]
-postgresql_psycopg2cffi = ["psycopg2cffi"]
+postgresql-asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
+postgresql-pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
+postgresql-psycopg2binary = ["psycopg2-binary"]
+postgresql-psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql", "pymysql (<1)"]
 sqlcipher = ["sqlcipher3-binary"]
 
@@ -471,7 +471,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "81e071d79c76dacfab851d41bc91e737a7bbde0e8cc283e26f85663afbb71fec"
+content-hash = "6a743f26aa8be1609b5a867283af8fe2e6b9957a8a8769c75a06b8e81da0c0cf"
 
 [metadata.files]
 brotli = [
@@ -537,8 +537,8 @@ numpy = [
     {file = "numpy-1.23.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:a1793f03c0cb1adcb1743028f0dcddd99275f5162c027928097f31c831bf7108"},
 ]
 pandas = [
-    {file = "pandas-1.5.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:b82cc524b486524dbca59b3de14ace4ef28820d1e777382a10d2b6b7c2908c34"},
-    {file = "pandas-1.5.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:b82cc524b486524dbca59b3de14ace4ef28820d1e777382a10d2b6b7c2908c34"},
+    {file = "pandas-1.5.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:932cb4fba0a76eeff762dd9ef0881861ab3ec131d8ca4f6ba22b1fae64a23b35"},
+    {file = "pandas-1.5.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:932cb4fba0a76eeff762dd9ef0881861ab3ec131d8ca4f6ba22b1fae64a23b35"},
 ]
 plotly = [
     {file = "plotly-5.1.0-py2.py3-none-any.whl", hash = "sha256:d60412ee21d85102f67e5c7134d59feb5e42a5cbbfb1e580ad67cbdf7589d80c"},
