@@ -308,7 +308,7 @@ reference = "piwheels"
 
 [[package]]
 name = "psycopg2-binary"
-version = "2.9.4"
+version = "2.9.5"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
@@ -395,19 +395,19 @@ aiomysql = ["aiomysql", "greenlet (!=0.4.17)"]
 aiosqlite = ["aiosqlite", "greenlet (!=0.4.17)", "typing-extensions (!=3.10.0.1)"]
 asyncio = ["greenlet (!=0.4.17)"]
 asyncmy = ["asyncmy (>=0.2.3,!=0.2.4)", "greenlet (!=0.4.17)"]
-mariadb_connector = ["mariadb (>=1.0.1,!=1.1.2)"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2)"]
 mssql = ["pyodbc"]
-mssql_pymssql = ["pymssql"]
-mssql_pyodbc = ["pyodbc"]
+mssql-pymssql = ["pymssql"]
+mssql-pyodbc = ["pyodbc"]
 mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
 mysql = ["mysqlclient (>=1.4.0)", "mysqlclient (>=1.4.0,<2)"]
-mysql_connector = ["mysql-connector-python"]
+mysql-connector = ["mysql-connector-python"]
 oracle = ["cx-oracle (>=7)", "cx-oracle (>=7,<8)"]
 postgresql = ["psycopg2 (>=2.7)"]
-postgresql_asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
-postgresql_pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
-postgresql_psycopg2binary = ["psycopg2-binary"]
-postgresql_psycopg2cffi = ["psycopg2cffi"]
+postgresql-asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
+postgresql-pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
+postgresql-psycopg2binary = ["psycopg2-binary"]
+postgresql-psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql", "pymysql (<1)"]
 sqlcipher = ["sqlcipher3-binary"]
 
@@ -471,7 +471,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.11"
-content-hash = "81e071d79c76dacfab851d41bc91e737a7bbde0e8cc283e26f85663afbb71fec"
+content-hash = "b92c553d32bb86c0ab51eedeb997f17ad93467b117c188bdb14b199012af5d7a"
 
 [metadata.files]
 brotli = [
@@ -544,10 +544,10 @@ plotly = [
     {file = "plotly-5.1.0-py2.py3-none-any.whl", hash = "sha256:d60412ee21d85102f67e5c7134d59feb5e42a5cbbfb1e580ad67cbdf7589d80c"},
 ]
 psycopg2-binary = [
-    {file = "psycopg2_binary-2.9.4-cp37-cp37m-linux_armv6l.whl", hash = "sha256:c6571b5d7e9017739dbf98a60c622f3fe938a84f85c058e72722cba6ab10b04a"},
-    {file = "psycopg2_binary-2.9.4-cp37-cp37m-linux_armv7l.whl", hash = "sha256:c6571b5d7e9017739dbf98a60c622f3fe938a84f85c058e72722cba6ab10b04a"},
-    {file = "psycopg2_binary-2.9.4-cp39-cp39-linux_armv6l.whl", hash = "sha256:c2dd565497a949badceae7d6b4b970649ff3a71cef639a5ac6da828c446e57bd"},
-    {file = "psycopg2_binary-2.9.4-cp39-cp39-linux_armv7l.whl", hash = "sha256:c2dd565497a949badceae7d6b4b970649ff3a71cef639a5ac6da828c446e57bd"},
+    {file = "psycopg2_binary-2.9.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:bb25cbfc4ab60b3c2ae0e2a27dcd1eda5d9a49c43023c7ae20d5dfeaf75c5010"},
+    {file = "psycopg2_binary-2.9.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:bb25cbfc4ab60b3c2ae0e2a27dcd1eda5d9a49c43023c7ae20d5dfeaf75c5010"},
+    {file = "psycopg2_binary-2.9.5-cp39-cp39-linux_armv6l.whl", hash = "sha256:146e4000df4f9ad5a86652e3a422035ced5af1c177dfb9c30a1fa07f3b99d4c6"},
+    {file = "psycopg2_binary-2.9.5-cp39-cp39-linux_armv7l.whl", hash = "sha256:146e4000df4f9ad5a86652e3a422035ced5af1c177dfb9c30a1fa07f3b99d4c6"},
 ]
 python-dateutil = [
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
