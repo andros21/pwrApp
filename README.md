@@ -1,18 +1,21 @@
-# ePwr Stats App
+<h1> pwrApp <a href="https://github.com/andros21/pwrApp/actions/workflows/build.yml">
+    <img src="https://img.shields.io/github/workflow/status/andros21/pwrApp/build%20pwrapp/master?label=build&logo=github" alt="build">
+    </a> <a href="https://github.com/andros21/pwrApp/actions/workflows/deploy.yml">
+      <img src="https://img.shields.io/github/workflow/status/andros21/pwrApp/flyio%20deploy/flyio?label=deploy&logo=github" alt="deploy">
+    </a>
+</h1>
 
-## :blue_book: Description
+### :blue_book: Description
 
 [Dash app](https://plotly.com/) used as web UI for read/analyze electric power consumption stats collected thanks to [:zap: mcce :zap:](https://github.com/andros21/mcce)
 
-## :star: Features
+### :star: Features
 
 * Simple to use with a pretty css style
 * Ready for production using nginx + gunicorn
 * Refresh data at page reload, querying them from local sqlite3 database
 
-#### :rotating_light:  Web UI preview on [Heroku](https://heroku.com/) :point_right: [ePwr Stats](https://epwr-stats.herokuapp.com/)  :rotating_light:
-
-## :rocket: Getting started
+### :rocket: Getting started
 
 Steps to run repo/project:
 
@@ -22,7 +25,7 @@ Steps to run repo/project:
    ```
 2. Create a python environment with packages needed
    ```
-   poetry install --no-root --no-dev
+   poetry install --no-root --only main
    ```
 3. Copy systemd service template file inside `/etc/systemd/system/`
 5. Change file permissions, that must be `-rw-r-----  root root`
