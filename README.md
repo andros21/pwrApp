@@ -1,7 +1,7 @@
 <h1> pwrApp <a href="https://github.com/andros21/pwrApp/actions/workflows/build.yml">
-    <img src="https://img.shields.io/github/workflow/status/andros21/pwrApp/build%20pwrapp/master?label=build&logo=github" alt="build">
+    <img src="https://img.shields.io/github/actions/workflow/status/andros21/pwrApp/build.yml?branch=master&label=build&logo=github" alt="build">
     </a> <a href="https://github.com/andros21/pwrApp/actions/workflows/deploy.yml">
-      <img src="https://img.shields.io/github/workflow/status/andros21/pwrApp/flyio%20deploy/flyio?label=deploy&logo=github" alt="deploy">
+      <img src="https://img.shields.io/github/actions/workflow/status/andros21/pwrApp/deploy.yml?branch=flyio&label=deploy&logo=github" alt="deploy">
     </a>
 </h1>
 
