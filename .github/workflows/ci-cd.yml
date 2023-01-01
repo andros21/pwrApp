@@ -1,21 +1,17 @@
 ---
-name: build pwrapp
+name: ci/cd pwrapp
 
 "on":
   workflow_dispatch:
   push:
     branches:
-      - master
-    paths:
-      - assets/*
-      - Dockerfile
-      - poetry.lock
-      - pyproject.toml
-
-permissions:
-  contents: read
-  id-token: write
-  packages: write
+      - flyio
+    paths-ignore:
+      - LICENSE
+      - README.md
+      - fly.toml
+      - .github/workflows/ci-cd.yml
+      - .github/dependabot.yml
 
 env:
   REGISTRY: ghcr.io
@@ -26,14 +22,16 @@ jobs:
   build:
     name: build pwrapp
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
     steps:
       - name: lowercase image name
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: checkout project
         uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
-        with:
-          ref: flyio
       - name: get base image
         id: base
         run: |
@@ -109,3 +107,31 @@ jobs:
       - name: tag pwrapp (latest)
         run: |
           crane tag "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel" latest
+  deploy:
+    name: flyio deploy
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: read
+    environment:
+      name: flyio
+      url: https://pwrapp.fly.dev
+    steps:
+      - name: lowercase image name
+        run: |
+          echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
+      - name: checkout project
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+      - name: install cosign
+        uses: sigstore/cosign-installer@9becc617647dfa20ae7b1151972e9b3a2c338a2b
+      - name: verify pwrapp image
+        env:
+          COSIGN_EXPERIMENTAL: 1
+        run: |
+          cosign verify "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest" | jq
+      - name: flyio deploy
+        uses: superfly/flyctl-actions@adbb124b95f2e47566253d95497432c27f4bdd70
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        with:
+          args: "deploy --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest"
