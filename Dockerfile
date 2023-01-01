@@ -6,7 +6,7 @@
 # Build a virtualenv using apko python-glibc image
 # => https://github.com/chainguard-images/python
 #
-ARG DIGEST=sha256:ff12da8be90e23ed68217309fa08c01013b763047cd4179c69583e630a335eea
+ARG DIGEST=sha256:ffb2d210e914d3494f3a2ca49cb7815bd28936a255674a9681b562a9462ce330
 FROM cgr.dev/chainguard/python@${DIGEST}
 WORKDIR /home/nonroot
 RUN ["/usr/bin/python3", "-m" , "venv", ".venv"]
