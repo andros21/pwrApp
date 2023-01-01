@@ -11,6 +11,7 @@ name: ci/cd pwrapp
       - README.md
       - fly.toml
       - .github/workflows/ci-cd.yml
+      - .github/workflows/vuln.yml
       - .github/dependabot.yml
 
 env:
