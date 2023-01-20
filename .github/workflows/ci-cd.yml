@@ -13,6 +13,7 @@ name: ci/cd pwrapp
       - .github/workflows/ci-cd.yml
       - .github/workflows/vuln.yml
       - .github/dependabot.yml
+      - test/
 
 env:
   REGISTRY: ghcr.io
@@ -83,22 +84,9 @@ jobs:
           push: true
           sbom: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel
-      # TODO
-      # Testing pwrapp image it's not easy, cause remote postgresql db
-      # is accessible only inside flyio lan. So future solution could be:
-      # * run postgresql service with docker locally
-      # * dump a simple table with correct entries
-      # * pass credential to smoke_pwrapp container
-      # * run pwrapp app and test connection
-      #- name: smoke test
-        #run: |
-          #set -x
-          #docker run --rm --detach -p 8080:8080 --name smoke_pwrapp \
-            #"${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
-          #sleep 3
-          #curl -X GET http://localhost:8080
-          #docker logs smoke_pwrapp
-          #docker stop smoke_pwrapp
+      # smoke test for pwrapp read `tesh.sh` header for more info
+      - name: smoke test
+        run: ./test/test.sh
       - name: cosign pwrapp
         env:
           COSIGN_EXPERIMENTAL: 1
