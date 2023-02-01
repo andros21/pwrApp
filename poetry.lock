@@ -37,13 +37,13 @@ reference = "piwheels"
 
 [[package]]
 name = "dash"
-version = "2.7.1"
+version = "2.8.1"
 description = "A Python framework for building reactive web-apps. Developed by Plotly."
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "dash-2.7.1-py3-none-any.whl", hash = "sha256:7146b8aefc87aa610a0085d6a7d9ffbebf6dbd272c72c31e3234bec4d8435cf8"},
+    {file = "dash-2.8.1-py3-none-any.whl", hash = "sha256:a4c89fbf59bdb33ea8b08e6a5148325e3e52330c7d534c7e9d61c6837005989f"},
 ]
 
 [package.dependencies]
@@ -532,4 +532,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "1d03d50b5cf98362a434e5371b50ea8a42c7537d5ecce91e78f23ff5f72d7e47"
+content-hash = "98bb24c5740a252b1f44620a7920bc9819ca752afde1575e6f23211ecfa737d5"
