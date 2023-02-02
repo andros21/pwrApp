@@ -40,7 +40,7 @@ docker run --rm \
    --env DATABASE_URL=postgres://postgres:password@10.89.0.2:5432/pwrapp \
    --name smoke_pwrapp \
    -p 8080:8080 \
-   "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
+   "${PWRAPP_DEVEL}"
 sleep 3
 curl -X GET http://localhost:8080
 docker logs smoke_pwrapp

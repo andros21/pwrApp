@@ -89,6 +89,8 @@ jobs:
       # smoke test for pwrapp read `tesh.sh` header for more info
       - name: smoke test
         run: ./test/test.sh
+        env:
+          PWRAPP_DEVEL: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
       - name: cosign pwrapp
         env:
           COSIGN_EXPERIMENTAL: 1
