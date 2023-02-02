@@ -427,43 +427,40 @@ reference = "piwheels"
 
 [[package]]
 name = "sqlalchemy"
-version = "2.0.1"
+version = "1.4.46"
 description = "Database Abstraction Library"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
 files = [
-    {file = "SQLAlchemy-2.0.1-cp37-cp37m-linux_armv6l.whl", hash = "sha256:1cfc2c6180b27b2bbe20f5d37beb6b67020f02b2211c86974752931344792c93"},
-    {file = "SQLAlchemy-2.0.1-cp37-cp37m-linux_armv7l.whl", hash = "sha256:1cfc2c6180b27b2bbe20f5d37beb6b67020f02b2211c86974752931344792c93"},
-    {file = "SQLAlchemy-2.0.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:c7b44bf7c3ed4890b71e3ff71237bb3cc012d191a8a81feb53f3419cb55d821d"},
-    {file = "SQLAlchemy-2.0.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:c7b44bf7c3ed4890b71e3ff71237bb3cc012d191a8a81feb53f3419cb55d821d"},
+    {file = "SQLAlchemy-1.4.46-cp37-cp37m-linux_armv6l.whl", hash = "sha256:d2cf34114d8eb049539c4b7bec9901df97904835b7c531ed38ff1bea4a3879fd"},
+    {file = "SQLAlchemy-1.4.46-cp37-cp37m-linux_armv7l.whl", hash = "sha256:d2cf34114d8eb049539c4b7bec9901df97904835b7c531ed38ff1bea4a3879fd"},
+    {file = "SQLAlchemy-1.4.46-cp39-cp39-linux_armv6l.whl", hash = "sha256:e7fec70a6e49918a96ed7261a8f52a80e43b3fe38bd3ad6c8e93c98511e321ae"},
+    {file = "SQLAlchemy-1.4.46-cp39-cp39-linux_armv7l.whl", hash = "sha256:e7fec70a6e49918a96ed7261a8f52a80e43b3fe38bd3ad6c8e93c98511e321ae"},
 ]
 
 [package.dependencies]
-greenlet = {version = "!=0.4.17", markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\""}
-typing-extensions = ">=4.2.0"
+greenlet = {version = "!=0.4.17", markers = "python_version >= \"3\" and (platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\")"}
 
 [package.extras]
 aiomysql = ["aiomysql", "greenlet (!=0.4.17)"]
 aiosqlite = ["aiosqlite", "greenlet (!=0.4.17)", "typing-extensions (!=3.10.0.1)"]
 asyncio = ["greenlet (!=0.4.17)"]
-asyncmy = ["asyncmy (>=0.2.3,!=0.2.4,!=0.2.6)", "greenlet (!=0.4.17)"]
-mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2,!=1.1.5)"]
+asyncmy = ["asyncmy (>=0.2.3,!=0.2.4)", "greenlet (!=0.4.17)"]
+mariadb-connector = ["mariadb (>=1.0.1,!=1.1.2)"]
 mssql = ["pyodbc"]
 mssql-pymssql = ["pymssql"]
 mssql-pyodbc = ["pyodbc"]
-mypy = ["mypy (>=0.910)"]
-mysql = ["mysqlclient (>=1.4.0)"]
+mypy = ["mypy (>=0.910)", "sqlalchemy2-stubs"]
+mysql = ["mysqlclient (>=1.4.0)", "mysqlclient (>=1.4.0,<2)"]
 mysql-connector = ["mysql-connector-python"]
-oracle = ["cx-oracle (>=7)"]
-oracle-oracledb = ["oracledb (>=1.0.1)"]
+oracle = ["cx-oracle (>=7)", "cx-oracle (>=7,<8)"]
 postgresql = ["psycopg2 (>=2.7)"]
 postgresql-asyncpg = ["asyncpg", "greenlet (!=0.4.17)"]
-postgresql-pg8000 = ["pg8000 (>=1.29.1)"]
-postgresql-psycopg = ["psycopg (>=3.0.7)"]
+postgresql-pg8000 = ["pg8000 (>=1.16.6,!=1.29.0)"]
 postgresql-psycopg2binary = ["psycopg2-binary"]
 postgresql-psycopg2cffi = ["psycopg2cffi"]
-pymysql = ["pymysql"]
+pymysql = ["pymysql", "pymysql (<1)"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [package.source]
@@ -484,22 +481,6 @@ files = [
 
 [package.extras]
 doc = ["reno", "sphinx", "tornado (>=4.5)"]
-
-[package.source]
-type = "legacy"
-url = "https://www.piwheels.org/simple"
-reference = "piwheels"
-
-[[package]]
-name = "typing-extensions"
-version = "4.4.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:979fb485ad436c08d30192f00835e928d3029f13146107787caec5a68c4a6725"},
-]
 
 [package.source]
 type = "legacy"
@@ -551,4 +532,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "ee37287e79f6f5bce3c590a0099225a358215b5642688fbeaf5d20fa5fb2aec5"
+content-hash = "1f99ee50ee0c0b23d99e8ea4ad0057f027fdb598a26a1f61b7b788e796df4790"
