@@ -82,8 +82,10 @@ jobs:
         with:
           context: .
           push: true
-          sbom: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel
+          # action fail with
+          # ERROR: attestations are not supported by the current buildkitd
+          #sbom: true
       # smoke test for pwrapp read `tesh.sh` header for more info
       - name: smoke test
         run: ./test/test.sh
