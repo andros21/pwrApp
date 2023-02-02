@@ -3,6 +3,7 @@
 # smoke test pwrapp with postgres
 # instance with partial db loaded
 
+set -x
 set -o errexit -o nounset -o errtrace -o pipefail
 
 # create tuntap network
@@ -34,16 +35,17 @@ docker restart postgres_emulator
 
 # start and test pwrapp
 sleep 3
-docker run --rm \
+docker run \
    --detach \
    --network tun-tap \
-   --env DATABASE_URL=postgres://postgres:password@10.89.0.2:5432/pwrapp \
+   --env DATABASE_URL="postgres://postgres:password@10.89.0.2:5432/pwrapp" \
    --name smoke_pwrapp \
    -p 8080:8080 \
    "${PWRAPP_DEVEL}"
 sleep 3
-curl -X GET http://localhost:8080
+curl -X GET http://localhost:8080 || docker logs smoke_pwrapp
 docker logs smoke_pwrapp
 docker stop smoke_pwrapp
 docker stop postgres_emulator
+docker rm smoke_pwrapp
 docker network rm tun-tap
