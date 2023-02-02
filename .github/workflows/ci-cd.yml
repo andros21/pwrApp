@@ -13,6 +13,7 @@ name: ci/cd pwrapp
       - .github/workflows/ci-cd.yml
       - .github/workflows/vuln.yml
       - .github/dependabot.yml
+      - test/
 
 env:
   REGISTRY: ghcr.io
@@ -32,7 +33,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: checkout project
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: get base image
         id: base
         run: |
@@ -41,7 +42,7 @@ jobs:
           echo "Base image: ${BASE_IMAGE}@${DIGEST}"
           echo "image=${BASE_IMAGE}@${DIGEST}" >> $GITHUB_OUTPUT
       - name: setup python
-        uses: actions/setup-python@5ccb29d8773c3f3f653e1705f474dfaa8a06a912
+        uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435
         with:
           python-version: 3.9
       - name: install poetry
@@ -77,27 +78,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: build pwrapp (devel)
         id: docker
-        uses: docker/build-push-action@c56af957549030174b10d6867f20e78cfd7debc5
+        uses: docker/build-push-action@37abcedcc1da61a57767b7588cb9d03eb57e28b3
         with:
           context: .
           push: true
+          sbom: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:devel
-      # TODO
-      # Testing pwrapp image it's not easy, cause remote postgresql db
-      # is accessible only inside flyio lan. So future solution could be:
-      # * run postgresql service with docker locally
-      # * dump a simple table with correct entries
-      # * pass credential to smoke_pwrapp container
-      # * run pwrapp app and test connection
-      #- name: smoke test
-        #run: |
-          #set -x
-          #docker run --rm --detach -p 8080:8080 --name smoke_pwrapp \
-            #"${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
-          #sleep 3
-          #curl -X GET http://localhost:8080
-          #docker logs smoke_pwrapp
-          #docker stop smoke_pwrapp
+      # smoke test for pwrapp read `tesh.sh` header for more info
+      - name: smoke test
+        run: ./test/test.sh
       - name: cosign pwrapp
         env:
           COSIGN_EXPERIMENTAL: 1
@@ -122,7 +111,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: checkout project
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       - name: install cosign
         uses: sigstore/cosign-installer@9becc617647dfa20ae7b1151972e9b3a2c338a2b
       - name: verify pwrapp image
