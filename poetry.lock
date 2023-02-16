@@ -489,13 +489,13 @@ reference = "piwheels"
 
 [[package]]
 name = "werkzeug"
-version = "2.2.2"
+version = "2.2.3"
 description = "The comprehensive WSGI web application library."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Werkzeug-2.2.2-py3-none-any.whl", hash = "sha256:1a9f7145a500730a923b220f1713e34153d7b36211d0ef24fae2ef76763b08ac"},
+    {file = "Werkzeug-2.2.3-py3-none-any.whl", hash = "sha256:1edfcadd36913573c92fa913157f85aab758c171d0fa9f33b2f35111f54e0ac7"},
 ]
 
 [package.dependencies]
