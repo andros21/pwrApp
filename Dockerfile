@@ -11,6 +11,6 @@ FROM cgr.dev/chainguard/python@${DIGEST}
 WORKDIR /home/nonroot
 RUN ["/usr/bin/python3", "-m" , "venv", ".venv"]
 COPY requirements.txt requirements.txt
-RUN [".venv/bin/pip", "install", "--disable-pip-version-check", "-r", "requirements.txt"]
+RUN [".venv/bin/pip", "install", "--no-cache-dir", "--disable-pip-version-check", "-r", "requirements.txt"]
 COPY . .
 ENTRYPOINT [".venv/bin/gunicorn", "--bind", ":8080", "--workers", "2", "pwrApp:server"]
