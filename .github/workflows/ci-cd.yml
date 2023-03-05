@@ -55,13 +55,9 @@ jobs:
       - name: install cosign
         uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
       - name: verify python apko image
-        env:
-          COSIGN_EXPERIMENTAL: 1
         run: |
           cosign verify "${{ steps.base.outputs.image }}" | jq
       - name: verify base image vuln
-        env:
-          COSIGN_EXPERIMENTAL: 1
         run: |
           set -x
           CVE_COUNT=(-1 -1)
@@ -92,8 +88,6 @@ jobs:
         env:
           PWRAPP_DEVEL: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
       - name: cosign pwrapp
-        env:
-          COSIGN_EXPERIMENTAL: 1
         run: |
           cosign sign "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
       - name: install crane
@@ -119,8 +113,6 @@ jobs:
       - name: install cosign
         uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
       - name: verify pwrapp image
-        env:
-          COSIGN_EXPERIMENTAL: 1
         run: |
           cosign verify "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest" | jq
       - name: flyio deploy
