@@ -50,6 +50,7 @@ jobs:
           virtualenvs-create: false
       - name: export requirements.txt
         run: |
+          set -x
           sed -i '20,24d' pyproject.toml
           poetry lock --no-update
           poetry export -o requirements.txt
