@@ -55,7 +55,7 @@ jobs:
           poetry lock --no-update
           poetry export -o requirements.txt
       - name: install cosign
-        uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
+        uses: sigstore/cosign-installer@9e9de2292db7abb3f51b7f4808d98f0d347a8919
       - name: verify python apko image
         run: |
           cosign verify \
@@ -106,7 +106,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: install cosign
-        uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
+        uses: sigstore/cosign-installer@9e9de2292db7abb3f51b7f4808d98f0d347a8919
       - name: verify pwrapp image
         run: |
           cosign verify \
