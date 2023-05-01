@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
       - name: checkout project
-        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
       - name: get base image
         id: base
         run: |
@@ -41,7 +41,7 @@ jobs:
           echo "Base image: ${BASE_IMAGE}@${DIGEST}"
           echo "image=${BASE_IMAGE}@${DIGEST}" >> $GITHUB_OUTPUT
       - name: setup python
-        uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435
+        uses: actions/setup-python@57ded4d7d5e986d7296eab16560982c6dd7c923b
         with:
           python-version: '3.9'
       - name: install poetry
@@ -50,11 +50,12 @@ jobs:
           virtualenvs-create: false
       - name: export requirements.txt
         run: |
+          set -x
           sed -i '20,24d' pyproject.toml
           poetry lock --no-update
           poetry export -o requirements.txt
       - name: install cosign
-        uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
+        uses: sigstore/cosign-installer@204a51a57a74d190b284a0ce69b44bc37201f343
       - name: verify python apko image
         run: |
           cosign verify \
@@ -104,10 +105,8 @@ jobs:
       - name: lowercase image name
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
-      - name: checkout project
-        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3
       - name: install cosign
-        uses: sigstore/cosign-installer@c3667d99424e7e6047999fb6246c0da843953c65
+        uses: sigstore/cosign-installer@204a51a57a74d190b284a0ce69b44bc37201f343
       - name: verify pwrapp image
         run: |
           cosign verify \
