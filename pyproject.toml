@@ -11,7 +11,7 @@ python = ">=3.9,<3.11"
 numpy = "^1.24.2"
 pandas = "^1.5.3"
 SQLAlchemy = "^1.4.46"
-dash = "^2.8.1"
+dash = "^2.9.3"
 gunicorn = "^20.1.0"
 psycopg2-binary = "^2.9.5"
 
