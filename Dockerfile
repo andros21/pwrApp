@@ -6,7 +6,7 @@
 # cgr.dev/chainguard/python:3.10 digest for deploy
 # => https://github.com/chainguard-images/images/tree/main/images/python
 #
-ARG DIGEST=sha256:1cdc4d5d1a3c974b74f0c9b16d51a38f8a5c510b7772a4fab65d9d80ff49b7e4
+ARG DIGEST=sha256:1fb78ae45ad7bfc9417a9341a9962e1a71169e0b05de73b45948d82042d0a014
 
 # cgr.dev/chainguard/python:3.10-dev for build
 # => https://github.com/chainguard-images/images/tree/main/images/python
