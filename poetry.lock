@@ -336,16 +336,16 @@ reference = "piwheels"
 
 [[package]]
 name = "psycopg2-binary"
-version = "2.9.5"
+version = "2.9.6"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "psycopg2_binary-2.9.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:bb25cbfc4ab60b3c2ae0e2a27dcd1eda5d9a49c43023c7ae20d5dfeaf75c5010"},
-    {file = "psycopg2_binary-2.9.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:bb25cbfc4ab60b3c2ae0e2a27dcd1eda5d9a49c43023c7ae20d5dfeaf75c5010"},
-    {file = "psycopg2_binary-2.9.5-cp39-cp39-linux_armv6l.whl", hash = "sha256:146e4000df4f9ad5a86652e3a422035ced5af1c177dfb9c30a1fa07f3b99d4c6"},
-    {file = "psycopg2_binary-2.9.5-cp39-cp39-linux_armv7l.whl", hash = "sha256:146e4000df4f9ad5a86652e3a422035ced5af1c177dfb9c30a1fa07f3b99d4c6"},
+    {file = "psycopg2_binary-2.9.6-cp37-cp37m-linux_armv6l.whl", hash = "sha256:e2485bcf8a678e026bf65bf8baf1a00acae13e46a5569a32c1b202f8ddd66695"},
+    {file = "psycopg2_binary-2.9.6-cp37-cp37m-linux_armv7l.whl", hash = "sha256:e2485bcf8a678e026bf65bf8baf1a00acae13e46a5569a32c1b202f8ddd66695"},
+    {file = "psycopg2_binary-2.9.6-cp39-cp39-linux_armv6l.whl", hash = "sha256:5373982e6c4cab18289c2c2ca1309f907d66d838bfa5ea46eedf46ea663b3c1b"},
+    {file = "psycopg2_binary-2.9.6-cp39-cp39-linux_armv7l.whl", hash = "sha256:5373982e6c4cab18289c2c2ca1309f907d66d838bfa5ea46eedf46ea663b3c1b"},
 ]
 
 [package.source]
@@ -532,4 +532,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "988131463bb6a8d718bd5b189e3696ad1363cfc908073522024e3d199c6a86e9"
+content-hash = "bddb81f7971a51be6e83df9ae997d350fba9cc3c43c9fcceafae5561b70a5215"
