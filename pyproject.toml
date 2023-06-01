@@ -20,7 +20,7 @@ psycopg2-binary = "^2.9.6"
 [[tool.poetry.source]]
 name = "piwheels"
 url = "https://www.piwheels.org/simple/"
-default = true
+priority = "default"
 
 [build-system]
 requires = ["poetry-core"]
