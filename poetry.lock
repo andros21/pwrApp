@@ -138,7 +138,7 @@ category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Flask-2.3.2-py3-none-any.whl", hash = "sha256:80abdcf372525ba9d2513180a638d40e159b365dc59ee368eea136417f72195c"},
+    {file = "Flask-2.3.2-py3-none-any.whl", hash = "sha256:a6d95dc78956c831aba6f67f677503069b542556ffff00dd5c1d42d14587b0db"},
 ]
 
 [package.dependencies]
@@ -306,14 +306,14 @@ reference = "piwheels"
 
 [[package]]
 name = "pandas"
-version = "2.0.0"
+version = "2.0.2"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pandas-2.0.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:79f124ee40b8ee8f97361119fba18d8494f598788eef8add904e600dd5840345"},
-    {file = "pandas-2.0.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:79f124ee40b8ee8f97361119fba18d8494f598788eef8add904e600dd5840345"},
+    {file = "pandas-2.0.2-cp39-cp39-linux_armv6l.whl", hash = "sha256:d1ba314790a3c78ae447a57f99dc57c2262ec3428418082521537a1b160d4d8f"},
+    {file = "pandas-2.0.2-cp39-cp39-linux_armv7l.whl", hash = "sha256:d1ba314790a3c78ae447a57f99dc57c2262ec3428418082521537a1b160d4d8f"},
 ]
 
 [package.dependencies]
@@ -568,7 +568,7 @@ category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Werkzeug-2.3.3-py3-none-any.whl", hash = "sha256:fec2318241327a6c70a6aeb7f381251498268d8cf1abb5b92f4d3a06f00875a8"},
+    {file = "Werkzeug-2.3.3-py3-none-any.whl", hash = "sha256:ab5409e4c768c821dd69a6937ee41d8bec2e437bcc3578a7af84f3e482a83ceb"},
 ]
 
 [package.dependencies]
@@ -605,4 +605,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "1184848a1f4c7b41e533d0bdedeb8377718d88bed682b7665dfa40d8e9458a56"
+content-hash = "8e8246876849b8506656a0726e408a46522c6e8b00ee596aac383941ab963be1"
