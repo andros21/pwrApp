@@ -11,6 +11,7 @@ name: ci/cd pwrapp
       - README.md
       - fly.toml
       - .github/workflows/ci-cd.yml
+      - .github/workflows/digesta.yml
       - .github/dependabot.yml
       - test/
 
