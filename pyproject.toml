@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
-numpy = "^1.24.2"
+numpy = "^1.25.0"
 pandas = "^2.0.2"
 SQLAlchemy = "^2.0.15"
 dash = "^2.10.2"
