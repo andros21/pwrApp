@@ -428,15 +428,15 @@ reference = "piwheels"
 
 [[package]]
 name = "sqlalchemy"
-version = "2.0.15"
+version = "2.0.17"
 description = "Database Abstraction Library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "SQLAlchemy-2.0.15-cp37-cp37m-linux_armv6l.whl", hash = "sha256:ef763c8c42f209ceeec56fc0758bce99700c7effea7ec84bf55443cea00e8e77"},
-    {file = "SQLAlchemy-2.0.15-cp37-cp37m-linux_armv7l.whl", hash = "sha256:ef763c8c42f209ceeec56fc0758bce99700c7effea7ec84bf55443cea00e8e77"},
-    {file = "SQLAlchemy-2.0.15-cp39-cp39-linux_armv6l.whl", hash = "sha256:9d31cb288a8e87a4d46b015e0346e23c65dfaffb26af5642fd01a5c3e42cc99e"},
-    {file = "SQLAlchemy-2.0.15-cp39-cp39-linux_armv7l.whl", hash = "sha256:9d31cb288a8e87a4d46b015e0346e23c65dfaffb26af5642fd01a5c3e42cc99e"},
+    {file = "SQLAlchemy-2.0.17-cp37-cp37m-linux_armv6l.whl", hash = "sha256:e6fb214443ad290e3849e70db9e2a9a3a85aa2bd4a7045029189c602f9356674"},
+    {file = "SQLAlchemy-2.0.17-cp37-cp37m-linux_armv7l.whl", hash = "sha256:e6fb214443ad290e3849e70db9e2a9a3a85aa2bd4a7045029189c602f9356674"},
+    {file = "SQLAlchemy-2.0.17-cp39-cp39-linux_armv6l.whl", hash = "sha256:11146f78b185723aa0564225f67f28a1dd061e007fed22afc6a8163bd232f8c5"},
+    {file = "SQLAlchemy-2.0.17-cp39-cp39-linux_armv7l.whl", hash = "sha256:11146f78b185723aa0564225f67f28a1dd061e007fed22afc6a8163bd232f8c5"},
 ]
 
 [package.dependencies]
@@ -463,6 +463,7 @@ postgresql-pg8000 = ["pg8000 (>=1.29.1)"]
 postgresql-psycopg = ["psycopg (>=3.0.7)"]
 postgresql-psycopg2binary = ["psycopg2-binary"]
 postgresql-psycopg2cffi = ["psycopg2cffi"]
+postgresql-psycopgbinary = ["psycopg[binary] (>=3.0.7)"]
 pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
@@ -562,4 +563,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "55da880a3a3b635d4d6329ee94a7f7e515c243d4d7b602dde1d8f8d25466ebb9"
+content-hash = "c4d35ff6c2f20623e314a68ed05a55ed8eb7267f4781dc1de04d012a9be2aa7a"
