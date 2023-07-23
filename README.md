@@ -35,7 +35,8 @@ Steps to run repo/project:
    sudo ln -s /etc/nginx/sites-available/pwrapp.conf /etc/nginx/sites-enable/pwrapp.conf
    ```
 
-   > **W:** check for `nginx.conf` mistakes using `nginx -c /etc/nginx/nginx.conf -t`
+   > [!WARNING]\
+   > Check for `nginx.conf` mistakes using `nginx -c /etc/nginx/nginx.conf -t`
 9. Reload systemd file
    ```
    sudo systemctl daemon-reload
