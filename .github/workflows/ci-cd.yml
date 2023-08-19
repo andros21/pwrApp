@@ -53,6 +53,7 @@ jobs:
         run: |
           set -x
           sed -i '20,24d' pyproject.toml
+          sed -i 's/>=3.9/>=3.10/;s/<3.11/<3.12/' pyproject.toml
           poetry lock --no-update
           poetry export -o requirements.txt
       - name: install cosign
