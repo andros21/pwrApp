@@ -18,7 +18,7 @@ RUN [".venv/bin/pip", "install", "--no-cache-dir", "--disable-pip-version-check"
 # => https://github.com/chainguard-images/images/tree/main/images/python
 #  * Copy venv from st stage
 #
-FROM cgr.dev/chainguard/python:latest@sha256:6e512c60467cb53572112d8b5f1200d93cc7f883db01e57836fd93754f6bb4e8
+FROM cgr.dev/chainguard/python:latest@sha256:2065a6e52402ba9616ad51d9fbc0c6587d51c253abc5065b13d87558b7974af4
 WORKDIR /home/nonroot
 COPY . .
 COPY --from=venv /home/nonroot/.venv .venv
