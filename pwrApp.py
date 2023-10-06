@@ -19,6 +19,7 @@
 import calendar
 import datetime
 import os
+from io import StringIO
 
 import dash
 import numpy as np
@@ -173,7 +174,7 @@ def update_hist(ser, month):
     """
     year = dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]
     return {
         "data": [
@@ -232,8 +233,8 @@ def update_mark1(ser):
     In case of None use January as default month
     """
     year = dyear
-    dailyStats = pd.read_json(ser)
-    v = np.around(dailyStats.sum(), 2)[0]
+    dailyStats = pd.read_json(StringIO(ser))
+    v = np.around(dailyStats.sum(), 2).iloc[0]
     des1 = "**Pie**: Percentuage " + f"of kWh for all months avaiable inside {year}"
     des2 = f"The **total** kWh for {year} " + f"are **{v}**"
     des = f"> {des1}\n\n> {des2}"
@@ -253,7 +254,7 @@ def update_mtable(ser, month):
     """
     year = dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]["kWh"]
     label = ["max", "min", "mid", "std", "sum"]
     value = np.around([df.max(), df.min(), df.mean(), df.std(), df.sum()], 2)
@@ -280,7 +281,7 @@ def update_plot_hover(ser, month, hoverdict):
     """
     year = dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]
     if hoverdict is not None:
         day = hoverdict["points"][0]["x"]
@@ -327,7 +328,7 @@ def update_plot_hover(ser, month, hoverdict):
 def update_pie(ser):
     """Update the pie plot using dailyStats"""
     year = dyear
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     min_month = dailyStats.index.month.min()
     max_month = dailyStats.index.month.max()
     colmap = [
@@ -347,7 +348,7 @@ def update_pie(ser):
     label = []
     value = []
     for month in np.arange(min_month, max_month + 1, 1):
-        v = np.around(dailyStats.loc[f"{year}-{str(month).zfill(2)}"].sum(), 2)[0]
+        v = np.around(dailyStats.loc[f"{year}-{str(month).zfill(2)}"].sum(), 2).iloc[0]
         l = calendar.month_name[month]
         value.append(v)
         label.append(l)
