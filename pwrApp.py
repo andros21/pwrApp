@@ -21,13 +21,13 @@ import datetime
 import os
 import re
 import sqlite3
+from io import StringIO
 
 import dash
-from dash import dcc
-from dash import html
-from dash import dash_table as dtt
 import numpy as np
 import pandas as pd
+from dash import dash_table as dtt
+from dash import dcc, html
 from dash.dependencies import Input, Output
 from flask import Flask
 
@@ -185,7 +185,7 @@ def update_month(ser):
     selected database year.
     In case of None use Current year as default year
     """
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     return (
         dailyStats.index.month.min(),
         dailyStats.index.month.max(),
@@ -218,7 +218,7 @@ def update_hist(year, month, ser):
     """
     year = year if year is not None else dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]
     return {
         "data": [
@@ -285,8 +285,8 @@ def update_mark1(year, ser):
     In case of None use January as default month
     """
     year = year if year is not None else dyear
-    dailyStats = pd.read_json(ser)
-    v = np.around(dailyStats.sum(), 2)[0]
+    dailyStats = pd.read_json(StringIO(ser))
+    v = np.around(dailyStats.sum(), 2).iloc[0]
     des1 = "**Pie**: Percentuage " + f"of kWh for all months avaiable inside {year}"
     des2 = f"The **total** kWh for {year} " + f"are **{v}**"
     des = f"> {des1}\n\n> {des2}"
@@ -312,7 +312,7 @@ def update_mtable(year, month, ser):
     """
     year = year if year is not None else dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]["kWh"]
     label = ["max", "min", "mid", "std", "sum"]
     value = np.around([df.max(), df.min(), df.mean(), df.std(), df.sum()], 2)
@@ -342,7 +342,7 @@ def update_plot_hover(ser, year, month, hoverdict):
     """
     year = year if year is not None else dyear
     month = month if month is not None else dmonth
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     df = dailyStats.loc[f"{year}-{str(month).zfill(2)}"]
     if hoverdict is not None:
         day = hoverdict["points"][0]["x"]
@@ -397,7 +397,7 @@ def update_pie(year, ser):
     In case of None use Current year as default year
     """
     year = year if year is not None else dyear
-    dailyStats = pd.read_json(ser)
+    dailyStats = pd.read_json(StringIO(ser))
     min_month = dailyStats.index.month.min()
     max_month = dailyStats.index.month.max()
     colmap = [
@@ -417,7 +417,7 @@ def update_pie(year, ser):
     label = []
     value = []
     for month in np.arange(min_month, max_month + 1, 1):
-        v = np.around(dailyStats.loc[f"{year}-{str(month).zfill(2)}"].sum(), 2)[0]
+        v = np.around(dailyStats.loc[f"{year}-{str(month).zfill(2)}"].sum(), 2).iloc[0]
         l = calendar.month_name[month]
         value.append(v)
         label.append(l)
