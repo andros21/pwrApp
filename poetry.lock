@@ -197,6 +197,8 @@ description = "Lightweight in-process concurrent programming"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 files = [
+    {file = "greenlet-2.0.0.post0-cp311-cp311-linux_armv6l.whl", hash = "sha256:ddf2c843309e6b6392fb37c967b893453b942b471ead67540da02775c1d00ab9"},
+    {file = "greenlet-2.0.0.post0-cp311-cp311-linux_armv7l.whl", hash = "sha256:ddf2c843309e6b6392fb37c967b893453b942b471ead67540da02775c1d00ab9"},
     {file = "greenlet-2.0.0.post0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:4be4815bba823c2412979bfc4d9da0c928ad0a1137ec36e81042266f09525d0a"},
     {file = "greenlet-2.0.0.post0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:4be4815bba823c2412979bfc4d9da0c928ad0a1137ec36e81042266f09525d0a"},
     {file = "greenlet-2.0.0.post0-cp39-cp39-linux_armv6l.whl", hash = "sha256:9e0d838a6a52ad51b5a52130e5b674add6342dc31732ea5336838279476c22fa"},
@@ -317,6 +319,8 @@ description = "Safely add untrusted strings to HTML/XML markup."
 optional = false
 python-versions = ">=3.7"
 files = [
+    {file = "MarkupSafe-2.1.1-cp311-cp311-linux_armv6l.whl", hash = "sha256:a3596ca9a413cf05a991f255e9ddc53ae1af7de318ec661adf59a6e3046bf8f7"},
+    {file = "MarkupSafe-2.1.1-cp311-cp311-linux_armv7l.whl", hash = "sha256:a3596ca9a413cf05a991f255e9ddc53ae1af7de318ec661adf59a6e3046bf8f7"},
     {file = "MarkupSafe-2.1.1-cp37-cp37m-linux_armv6l.whl", hash = "sha256:04ecce2077c9c531334c847b604835e8e909f73d1fe596ceae30c8046ca90686"},
     {file = "MarkupSafe-2.1.1-cp37-cp37m-linux_armv7l.whl", hash = "sha256:04ecce2077c9c531334c847b604835e8e909f73d1fe596ceae30c8046ca90686"},
     {file = "MarkupSafe-2.1.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:635983650c67c69118fe07c52f799b789d17edb9051777476b646278602d47dd"},
@@ -345,13 +349,13 @@ reference = "piwheels"
 
 [[package]]
 name = "numpy"
-version = "1.25.2"
+version = "1.26.0"
 description = "Fundamental package for array computing in Python"
 optional = false
-python-versions = ">=3.9"
+python-versions = "<3.13,>=3.9"
 files = [
-    {file = "numpy-1.25.2-cp39-cp39-linux_armv6l.whl", hash = "sha256:4b0bf79e4c9ea416d3e7ddfd463263b7489c80e8fac9c94f3c9f11ee443210b7"},
-    {file = "numpy-1.25.2-cp39-cp39-linux_armv7l.whl", hash = "sha256:4b0bf79e4c9ea416d3e7ddfd463263b7489c80e8fac9c94f3c9f11ee443210b7"},
+    {file = "numpy-1.26.0-cp311-cp311-linux_armv6l.whl", hash = "sha256:e45c77ca11e813a2ab79efe540078e214f8ddaedea3d235917409d97fd937e78"},
+    {file = "numpy-1.26.0-cp311-cp311-linux_armv7l.whl", hash = "sha256:e45c77ca11e813a2ab79efe540078e214f8ddaedea3d235917409d97fd937e78"},
 ]
 
 [package.source]
@@ -447,6 +451,8 @@ description = "psycopg2 - Python-PostgreSQL Database Adapter"
 optional = false
 python-versions = ">=3.6"
 files = [
+    {file = "psycopg2_binary-2.9.7-cp311-cp311-linux_armv6l.whl", hash = "sha256:d5003bd458597db89ae5634d23f1c4c08642dbe5702883333e51d72dc36e72a5"},
+    {file = "psycopg2_binary-2.9.7-cp311-cp311-linux_armv7l.whl", hash = "sha256:d5003bd458597db89ae5634d23f1c4c08642dbe5702883333e51d72dc36e72a5"},
     {file = "psycopg2_binary-2.9.7-cp37-cp37m-linux_armv6l.whl", hash = "sha256:e709bbe495eb43f123e2fb6258d4b16f5f6de1249077eb926582b2c6686639ab"},
     {file = "psycopg2_binary-2.9.7-cp37-cp37m-linux_armv7l.whl", hash = "sha256:e709bbe495eb43f123e2fb6258d4b16f5f6de1249077eb926582b2c6686639ab"},
     {file = "psycopg2_binary-2.9.7-cp39-cp39-linux_armv6l.whl", hash = "sha256:194b336e04abecd3f2c4b15f39923efd7b73a0af613aa65606073edd9994fc72"},
@@ -576,6 +582,8 @@ description = "Database Abstraction Library"
 optional = false
 python-versions = ">=3.7"
 files = [
+    {file = "SQLAlchemy-2.0.20-cp311-cp311-linux_armv6l.whl", hash = "sha256:0bd654d412e6cbffaeaa9ce3c82b65b4ffd48fb1954db67832c097c2c55f3a78"},
+    {file = "SQLAlchemy-2.0.20-cp311-cp311-linux_armv7l.whl", hash = "sha256:0bd654d412e6cbffaeaa9ce3c82b65b4ffd48fb1954db67832c097c2c55f3a78"},
     {file = "SQLAlchemy-2.0.20-cp37-cp37m-linux_armv6l.whl", hash = "sha256:894c2d5c4a1606cdd48c280ac6fa135861a33ab8f5d0bef7ecf95ddc98284c93"},
     {file = "SQLAlchemy-2.0.20-cp37-cp37m-linux_armv7l.whl", hash = "sha256:894c2d5c4a1606cdd48c280ac6fa135861a33ab8f5d0bef7ecf95ddc98284c93"},
     {file = "SQLAlchemy-2.0.20-cp39-cp39-linux_armv6l.whl", hash = "sha256:ae2f4951c066d13b6fd90751bb80e76127af66680fe8346c868febfea574e8fa"},
@@ -727,4 +735,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.11"
-content-hash = "86d7f676e781b9ff102cf2f4de508587397338551652b38149a6ad1f82fd4b0f"
+content-hash = "627ebc91a793f3e11a2f8778c1614d296440f2d3f14a693edf0b34737a5b401c"
