@@ -646,12 +646,12 @@ reference = "piwheels"
 
 [[package]]
 name = "typing-extensions"
-version = "4.5.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
+version = "4.8.0"
+description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.5.0-py3-none-any.whl", hash = "sha256:56ef78cbdada308be2290c7a515383789bdda3216f88eb55f1d2374da38d15c4"},
+    {file = "typing_extensions-4.8.0-py3-none-any.whl", hash = "sha256:29bca1f21e385ecf6ac33b2a1b6b7f2f6fde611f82154886c28c0900ef753755"},
 ]
 
 [package.source]
