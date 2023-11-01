@@ -193,22 +193,22 @@ reference = "piwheels"
 
 [[package]]
 name = "greenlet"
-version = "2.0.0.post0"
+version = "3.0.1"
 description = "Lightweight in-process concurrent programming"
 optional = false
-python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
+python-versions = ">=3.7"
 files = [
-    {file = "greenlet-2.0.0.post0-cp311-cp311-linux_armv6l.whl", hash = "sha256:ddf2c843309e6b6392fb37c967b893453b942b471ead67540da02775c1d00ab9"},
-    {file = "greenlet-2.0.0.post0-cp311-cp311-linux_armv7l.whl", hash = "sha256:ddf2c843309e6b6392fb37c967b893453b942b471ead67540da02775c1d00ab9"},
-    {file = "greenlet-2.0.0.post0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:4be4815bba823c2412979bfc4d9da0c928ad0a1137ec36e81042266f09525d0a"},
-    {file = "greenlet-2.0.0.post0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:4be4815bba823c2412979bfc4d9da0c928ad0a1137ec36e81042266f09525d0a"},
-    {file = "greenlet-2.0.0.post0-cp39-cp39-linux_armv6l.whl", hash = "sha256:9e0d838a6a52ad51b5a52130e5b674add6342dc31732ea5336838279476c22fa"},
-    {file = "greenlet-2.0.0.post0-cp39-cp39-linux_armv7l.whl", hash = "sha256:9e0d838a6a52ad51b5a52130e5b674add6342dc31732ea5336838279476c22fa"},
+    {file = "greenlet-3.0.1-cp311-cp311-linux_armv6l.whl", hash = "sha256:9f233c2f63c83176b8333161bf7c91e6277d136085f998474f578c17516fdc8a"},
+    {file = "greenlet-3.0.1-cp311-cp311-linux_armv7l.whl", hash = "sha256:9f233c2f63c83176b8333161bf7c91e6277d136085f998474f578c17516fdc8a"},
+    {file = "greenlet-3.0.1-cp37-cp37m-linux_armv6l.whl", hash = "sha256:cc811711368730d1c0f947de87f95762063f8fb59fab08def130bc4d6635653d"},
+    {file = "greenlet-3.0.1-cp37-cp37m-linux_armv7l.whl", hash = "sha256:cc811711368730d1c0f947de87f95762063f8fb59fab08def130bc4d6635653d"},
+    {file = "greenlet-3.0.1-cp39-cp39-linux_armv6l.whl", hash = "sha256:da2fc41912f9a99c975e00694444b53d666e1bda3a3344ed4bd419a070163803"},
+    {file = "greenlet-3.0.1-cp39-cp39-linux_armv7l.whl", hash = "sha256:da2fc41912f9a99c975e00694444b53d666e1bda3a3344ed4bd419a070163803"},
 ]
 
 [package.extras]
-docs = ["Sphinx", "docutils (<0.18)"]
-test = ["faulthandler", "objgraph"]
+docs = ["Sphinx"]
+test = ["objgraph", "psutil"]
 
 [package.source]
 type = "legacy"
