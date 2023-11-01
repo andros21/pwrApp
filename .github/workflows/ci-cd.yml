@@ -32,9 +32,9 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> "${GITHUB_ENV}"
       - name: checkout project
-        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: setup python
-        uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1
+        uses: actions/setup-python@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236
         with:
           python-version: '3.9'
       - name: install poetry
@@ -45,7 +45,7 @@ jobs:
         run: |
           set -x
           sed -i '20,24d' pyproject.toml
-          sed -i 's/>=3.9/>=3.10/;s/<3.11/<3.12/' pyproject.toml
+          sed -i 's/>=3.9/>=3.10/;s/<3.11/<3.13/' pyproject.toml
           poetry lock --no-update
           poetry export -o requirements.txt
       - name: install cosign
@@ -109,7 +109,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> "${GITHUB_ENV}"
       - name: checkout project
-        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: install cosign
         uses: sigstore/cosign-installer@11086d25041f77fe8fe7b9ea4e48e3b9192b8f19
       - name: verify pwrapp image
