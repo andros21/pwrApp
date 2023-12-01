@@ -49,7 +49,7 @@ jobs:
           poetry lock --no-update
           poetry export -o requirements.txt
       - name: install cosign
-        uses: sigstore/cosign-installer@11086d25041f77fe8fe7b9ea4e48e3b9192b8f19
+        uses: sigstore/cosign-installer@1fc5bd396d372bee37d608f955b336615edf79c8
       - name: verify base images
         run: |
           cosign dockerfile verify \
@@ -73,7 +73,7 @@ jobs:
           images: ${{ env.IMAGE_NAME }}
       - name: build pwrapp (devel)
         id: docker
-        uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09
+        uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56
         with:
           context: .
           push: true
@@ -111,7 +111,7 @@ jobs:
       - name: checkout project
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: install cosign
-        uses: sigstore/cosign-installer@11086d25041f77fe8fe7b9ea4e48e3b9192b8f19
+        uses: sigstore/cosign-installer@1fc5bd396d372bee37d608f955b336615edf79c8
       - name: verify pwrapp image
         run: |
           cosign verify \
