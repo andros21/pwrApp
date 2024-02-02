@@ -25,8 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
       packages: write
+    outputs:
+      digest: ${{ steps.docker.outputs.digest }}
     steps:
       - name: lowercase image name
         run: |
@@ -87,9 +88,29 @@ jobs:
         run: ./test/test.sh
         env:
           PWRAPP_DEVEL: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
+  cosign:
+    name: cosign pwrapp
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+    needs: build
+    steps:
+      - name: lowercase image name
+        run: |
+          echo "IMAGE_NAME=${IMAGE_NAME,,}" >> "${GITHUB_ENV}"
+      - name: install cosign
+        uses: sigstore/cosign-installer@e1523de7571e31dbe865fd2e80c5c7c23ae71eb4
+      - name: login ghcr.io
+        uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: cosign pwrapp
         run: |
-          cosign sign -y "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.docker.outputs.digest }}"
+          cosign sign -y "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.build.outputs.digest }}"
       - name: install crane
         uses: imjasonh/setup-crane@00c9e93efa4e1138c9a7a5c594acd6c75a2fbf0c
       - name: tag pwrapp (latest)
@@ -111,7 +132,7 @@ jobs:
       - name: checkout project
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: install cosign
-        uses: sigstore/cosign-installer@9614fae9e5c5eddabb09f90a270fcb487c9f7149
+        uses: sigstore/cosign-installer@e1523de7571e31dbe865fd2e80c5c7c23ae71eb4
       - name: verify pwrapp image
         run: |
           cosign verify \
