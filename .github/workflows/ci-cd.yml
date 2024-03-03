@@ -33,22 +33,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> "${GITHUB_ENV}"
       - name: checkout project
-        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
-      - name: setup python
-        uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c
-        with:
-          python-version: '3.9'
-      - name: install poetry
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
-        with:
-          virtualenvs-create: false
-      - name: export requirements.txt
-        run: |
-          set -x
-          sed -i '20,24d' pyproject.toml
-          sed -i 's/>=3.9/>=3.10/;s/<3.11/<3.13/' pyproject.toml
-          poetry lock --no-update
-          poetry export -o requirements.txt
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: install cosign
         uses: sigstore/cosign-installer@9614fae9e5c5eddabb09f90a270fcb487c9f7149
       - name: verify base images

@@ -11,7 +11,7 @@ updates:
     reviewers:
       - "andros21"
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: "requirements/"
     schedule:
       interval: "monthly"
     rebase-strategy: "disabled"
