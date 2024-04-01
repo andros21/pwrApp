@@ -9,8 +9,8 @@
 FROM cgr.dev/chainguard/python:latest-dev as venv
 WORKDIR /home/nonroot
 RUN ["/usr/bin/python", "-m" , "venv", ".venv"]
-COPY requirements.txt requirements.txt
-RUN [".venv/bin/pip", "install", "--no-cache-dir", "--disable-pip-version-check", "--require-hashes", "-r", "requirements.txt"]
+COPY requirements/requirements.txt requirements.txt
+RUN [".venv/bin/pip", "install", "--no-cache-dir", "--disable-pip-version-check", "--upgrade", "-r", "requirements.txt"]
 
 
 
@@ -18,7 +18,7 @@ RUN [".venv/bin/pip", "install", "--no-cache-dir", "--disable-pip-version-check"
 # => https://github.com/chainguard-images/images/tree/main/images/python
 #  * Copy venv from st stage
 #
-FROM cgr.dev/chainguard/python:latest@sha256:c7c2a5c9dda407966db7b767aca6f06413941176428eb162b5a9499940407786
+FROM cgr.dev/chainguard/python:latest@sha256:c8c58449cd64727cfca03206b798ee9f3d64f8930273855db573538e023150a0
 WORKDIR /home/nonroot
 COPY . .
 COPY --from=venv /home/nonroot/.venv .venv
