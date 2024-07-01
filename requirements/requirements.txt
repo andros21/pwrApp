@@ -12,7 +12,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via flask
-dash==2.17.0
+dash==2.17.1
     # via -r requirements.in
 dash-core-components==2.0.0
     # via dash
@@ -66,7 +66,7 @@ six==1.16.0
     # via
     #   python-dateutil
     #   retrying
-sqlalchemy==2.0.30
+sqlalchemy==2.0.31
     # via -r requirements.in
 tenacity==8.2.3
     # via plotly
