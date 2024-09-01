@@ -6,7 +6,7 @@
 # cgr.dev/chainguard/python:latest-dev for build
 # => https://github.com/chainguard-images/images/tree/main/images/python
 #
-FROM cgr.dev/chainguard/python:latest-dev as venv
+FROM cgr.dev/chainguard/python:latest-dev AS venv
 WORKDIR /home/nonroot
 RUN ["/usr/bin/python", "-m" , "venv", ".venv"]
 COPY requirements/requirements.txt requirements.txt
