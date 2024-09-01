@@ -24,7 +24,7 @@ flask==3.0.2
     # via dash
 greenlet==3.0.3
     # via sqlalchemy
-gunicorn==22.0.0
+gunicorn==23.0.0
     # via -r requirements.in
 idna==3.7
     # via requests
