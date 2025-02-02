@@ -40,7 +40,7 @@ markupsafe==2.1.5
     #   werkzeug
 nest-asyncio==1.6.0
     # via dash
-numpy==2.2.1
+numpy==2.2.2
     # via
     #   -r requirements.in
     #   pandas
@@ -66,7 +66,7 @@ six==1.16.0
     # via
     #   python-dateutil
     #   retrying
-sqlalchemy==2.0.36
+sqlalchemy==2.0.37
     # via -r requirements.in
 tenacity==8.2.3
     # via plotly
