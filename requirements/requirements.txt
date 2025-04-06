@@ -12,14 +12,8 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via flask
-dash==2.18.2
+dash==3.0.1
     # via -r requirements.in
-dash-core-components==2.0.0
-    # via dash
-dash-html-components==2.0.0
-    # via dash
-dash-table==5.0.0
-    # via dash
 flask==3.0.2
     # via dash
 greenlet==3.0.3
