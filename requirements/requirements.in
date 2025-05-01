@@ -1,9 +1,9 @@
 # requirements.in
 # ================
 
-numpy==2.2.4
+numpy==2.2.5
 pandas==2.2.3
 SQLAlchemy==2.0.40
-dash==3.0.2
+dash==3.0.4
 gunicorn==23.0.0
 psycopg2-binary==2.9.9
