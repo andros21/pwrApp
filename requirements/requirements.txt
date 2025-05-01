@@ -46,7 +46,7 @@ pandas==2.2.3
     # via -r requirements.in
 plotly==5.19.0
     # via dash
-psycopg2-binary==2.9.10
+psycopg2-binary==2.9.9
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via pandas
