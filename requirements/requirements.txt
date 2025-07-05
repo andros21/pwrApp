@@ -12,7 +12,7 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via flask
-dash==3.0.4
+dash==3.1.1
     # via -r requirements.in
 flask==3.0.2
     # via dash
@@ -34,7 +34,7 @@ markupsafe==2.1.5
     #   werkzeug
 nest-asyncio==1.6.0
     # via dash
-numpy==2.2.6
+numpy==2.3.1
     # via
     #   -r requirements.in
     #   pandas
@@ -42,7 +42,7 @@ packaging==23.2
     # via
     #   gunicorn
     #   plotly
-pandas==2.2.3
+pandas==2.3.0
     # via -r requirements.in
 plotly==5.19.0
     # via dash
