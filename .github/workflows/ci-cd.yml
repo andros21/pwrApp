@@ -35,7 +35,7 @@ jobs:
       - name: checkout project
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: install cosign
-        uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
+        uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159
       - name: verify base images
         run: |
           cosign dockerfile verify \
@@ -86,7 +86,7 @@ jobs:
         run: |
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> "${GITHUB_ENV}"
       - name: install cosign
-        uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
+        uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159
       - name: login ghcr.io
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
         with:
@@ -117,7 +117,7 @@ jobs:
       - name: checkout project
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: install cosign
-        uses: sigstore/cosign-installer@398d4b0eeef1380460a10c8013a76f728fb906ac
+        uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159
       - name: verify pwrapp image
         run: |
           cosign verify \
