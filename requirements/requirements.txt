@@ -42,7 +42,7 @@ packaging==23.2
     # via
     #   gunicorn
     #   plotly
-pandas==2.3.1
+pandas==2.3.2
     # via -r requirements.in
 plotly==5.19.0
     # via dash
@@ -60,7 +60,7 @@ six==1.16.0
     # via
     #   python-dateutil
     #   retrying
-sqlalchemy==2.0.42
+sqlalchemy==2.0.43
     # via -r requirements.in
 tenacity==8.2.3
     # via plotly
