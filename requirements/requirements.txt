@@ -70,7 +70,7 @@ typing-extensions==4.10.0
     #   sqlalchemy
 tzdata==2024.1
     # via pandas
-urllib3==2.5.0
+urllib3==2.6.0
     # via requests
 werkzeug==3.0.6
     # via
